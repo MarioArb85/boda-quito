@@ -118,15 +118,13 @@
             flex-wrap: wrap;
         }
 
-        /* NUEVO: Contenedor para limitar el ancho a 1200px */
         .checkerboard-limited {
             max-width: 1200px;
             margin: 0 auto;
         }
 
-        /* AJUSTE SOLICITADO: Margin de 20px sin romper la línea */
         .cb-item {
-            flex: 0 0 calc(50% - 40px); /* 50% menos el margen total (20px izquierda + 20px derecha) */
+            flex: 0 0 calc(50% - 40px); /* 50% menos el margen total */
             margin: 20px;
             min-height: 400px;
             display: flex;
@@ -275,8 +273,9 @@
         @media (max-width: 768px) {
 			header {background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('header_mobile.jpg'); justify-content: space-between; padding: 10px;}
             .display-title { font-size: 4rem;}
-            .cb-item { flex: 100%; min-height: 300px; margin: 10px;} /* Ajuste de ancho en móvil con márgenes */        
-			.checkerboard-limited .checkerboard {margin: 10px}
+            /* SOLUCIÓN: Ajuste de ancho en móvil restando márgenes */
+            .cb-item { flex: 0 0 calc(100% - 20px); min-height: 300px; margin: 10px;} 
+			.checkerboard-limited .checkerboard {margin: 0px}
 			.checkerboard-limited .checkerboard:last-of-type {flex-direction: column-reverse;}
 
             .gallery-grid { grid-template-columns: repeat(2, 1fr); }
@@ -324,8 +323,8 @@
 					TBD
                 </p>
 
-                <a href="https://maps.app.goo.gl/bXthbUsraWgUS1Pj7" target="_blank" class="btn-link" data-lang="en">Get map & direction</a>
-                <a href="https://maps.app.goo.gl/bXthbUsraWgUS1Pj7" target="_blank" class="btn-link" data-lang="es">Ver mapa y dirección</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=Museo+de+la+Ciudad+Quito" target="_blank" class="btn-link" data-lang="en">Get map & direction</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=Museo+de+la+Ciudad+Quito" target="_blank" class="btn-link" data-lang="es">Ver mapa y dirección</a>
             </div>
             <div class="cb-item cb-image img-2"></div>
         </section>
@@ -353,8 +352,8 @@
 					TBD
                 </p>
 
-                <a href="https://maps.app.goo.gl/bwX4521oKhQuUPJJ7" target="_blank" class="btn-link" data-lang="en">Get map & direction</a>
-                <a href="https://maps.app.goo.gl/bwX4521oKhQuUPJJ7" target="_blank" class="btn-link" data-lang="es">Ver mapa y dirección</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=Hacienda+Napoles+Puembo" target="_blank" class="btn-link" data-lang="en">Get map & direction</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=Hacienda+Napoles+Puembo" target="_blank" class="btn-link" data-lang="es">Ver mapa y dirección</a>
             </div>
         </section>
     </div>
@@ -389,37 +388,14 @@
             </p>
 
             <button class="rsvp-btn">RSVP</button>
-            
-            <br><br>
-            <div style="background: white; padding: 5px 15px; display: inline-block; margin-top: 20px;">
-                <h2 class="cursive-title" style="color: var(--color-green); margin:0; font-size: 1.5rem;" data-lang="en">Wedding events</h2>
-                <h2 class="cursive-title" style="color: var(--color-green); margin:0; font-size: 1.5rem;" data-lang="es">Eventos de la boda</h2>
-            </div>
-            <p style="font-size: 0.7rem; margin-top: 10px;" data-lang="en">Join us on our special day! <br> We hope to see you...</p>
-            <p style="font-size: 0.7rem; margin-top: 10px;" data-lang="es">¡Acompáñanos! <br> Esperamos verte...</p>
         </div>
         <div class="cb-item cb-image couple-img"></div>
     </section>
 
     <section class="gallery-section">
-        <h2 class="cursive-title" style="color: #333;" data-lang="en">Wedding events</h2>
-        <h2 class="cursive-title" style="color: #333;" data-lang="es">Eventos de la boda</h2>
+        <h2 class="cursive-title" style="color: #333;" data-lang="en">Gallery</h2>
+        <h2 class="cursive-title" style="color: #333;" data-lang="es">Galería</h2>
         
-        <p class="text-body" style="color: #777; max-width: 600px; margin: 0 auto;">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-
-        <nav class="gallery-nav">
-            <ul>
-                <li data-lang="en">All</li><li data-lang="es">Todos</li>
-                <li data-lang="en">Moments</li><li data-lang="es">Momentos</li>
-                <li data-lang="en">Friends</li><li data-lang="es">Amigos</li>
-                <li data-lang="en">Banquet</li><li data-lang="es">Banquete</li>
-                <li data-lang="en">Family</li><li data-lang="es">Familia</li>
-                <li data-lang="en">Party</li><li data-lang="es">Fiesta</li>
-            </ul>
-        </nav>
-
         <div class="gallery-grid">
             <div class="gallery-item g-1"></div>
             <div class="gallery-item g-2"></div>
@@ -436,14 +412,14 @@
         <h2 class="cursive-title" style="color: white;" data-lang="en">The big day</h2>
         <h2 class="cursive-title" style="color: white;" data-lang="es">El gran día</h2>
         
-        <div class="footer-date" data-lang="en">28 . November . 2023</div>
-        <div class="footer-date" data-lang="es">28 . Noviembre . 2023</div>
+        <div class="footer-date" data-lang="en">11 . July . 2026</div>
+        <div class="footer-date" data-lang="es">11 . Julio . 2026</div>
         
         <p class="footer-thanks" data-lang="en">
-            We are so excited to celebrate our special day with our family and friends. Thank you so much for visiting our wedding website!
+            We are so excited to celebrate our special day with our family and friends!
         </p>
         <p class="footer-thanks" data-lang="es">
-            Estamos muy emocionados de celebrar nuestro día especial con familia y amigos. ¡Muchas gracias por visitar nuestra web de boda!
+            ¡Estamos muy emocionados de celebrar nuestro día especial con familia y amigos!
         </p>
     </footer>
 
