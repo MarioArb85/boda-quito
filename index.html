@@ -97,24 +97,33 @@
             letter-spacing: 1px;
         }
 
-        .green-section { background-color: var(--color-green); color: var(--color-white); }
+        .green-section {flex: 35%; min-height: auto; background-color: var(--color-green); color: var(--color-white); margin: 0; justify-content: start;}
         .green-section .cursive-title, .green-section p { color: var(--color-white); }
 
         .rsvp-btn {
             background-color: var(--color-bg);
             color: var(--color-green);
-            border: none;
+            border: 2px solid var(--color-bg);
             padding: 10px 40px;
             border-radius: 20px;
-            font-family: var(--font-display);
             font-size: 1.5rem;
             cursor: pointer;
-            margin-top: 20px;
-            transition: transform 0.2s;
+            margin-top: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .rsvp-btn:hover {
+            background-color: var(--color-green);
+            color: var(--color-bg);
+            border-color: var(--color-bg);
+            transform: scale(1.05);
         }
 
         .couple-img {
-            background-image: url('https://images.unsplash.com/photo-1623861348339-446738c82ce0?q=80&w=1000&auto=format&fit=crop');
+			flex: 30%;
+			margin: 0;
+			background-color: var(--color-green);
+            background-image: url('confirma tu asistencia.jpg');
             background-size: cover;
             background-position: center;
         }
@@ -133,7 +142,7 @@
         .g-8 { background-image: url('https://picsum.photos/400?random=8'); }
 
         footer {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1511285560982-1351cdeb9821?q=80&w=1000&auto=format&fit=crop');
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('footer.jpg');
             background-size: cover;
             background-position: center;
             color: white;
@@ -187,15 +196,26 @@
 
     <section class="checkerboard">
         <div class="cb-item green-section">
-            <div style="background: white; padding: 5px 15px; display: inline-block; margin-bottom: 20px;">
-                <h2 class="cursive-title" style="color: var(--color-green); margin:0; font-size: 2rem;" data-translate="events_tag"></h2>
+            <div>
+                <h2 class="cursive-title" data-translate="events_tag"></h2>
             </div>
-            <p data-translate="rsvp_intro"></p>
-            <br>
-            <p style="font-size: 0.8rem;" data-translate="rsvp_deadline_text"></p>
+            <p data-translate="rsvp_text1"></p>
+			<br>
+            <p data-translate="rsvp_text2"></p>
             <button class="rsvp-btn">RSVP</button>
         </div>
         <div class="cb-item cb-image couple-img"></div>
+		<div class="cb-item green-section">
+            <div>
+                <h2 class="cursive-title" data-translate="colaboracion_tag"></h2>
+            </div>
+            <p data-translate="colab_text1"></p>
+			<br>
+			<p data-translate="colab_text2"></p>
+			<br>
+			<p data-translate="colab_nombre"></p>
+			<p data-translate="colab_cuenta"></p>
+        </div>
     </section>
 
     <section class="gallery-section">
@@ -213,7 +233,6 @@
     </section>
 
     <footer>
-        <h2 class="cursive-title" style="color: white;" data-translate="footer_title"></h2>
         <div class="footer-date" data-translate="footer_date"></div>
         <p class="footer-thanks" data-translate="footer_thanks"></p>
     </footer>
@@ -229,13 +248,17 @@
                 map_btn: "Ver mapa y dirección",
                 wedding_title: "Ceremonia y Celebración",
                 wedding_body: "Sábado 11 de julio 2026, 12:30h (GMT-5)\n\nHacienda Nápoles\nVia A Napoles, Puembo 170179, Ecuador.\n\nDress code: Formal. [No White]\n\nServicio de autobuses:\nTBD",
-                events_tag: "Eventos de la boda",
-                rsvp_intro: "¡Únete a nosotros en nuestro día especial!",
-                rsvp_deadline_text: "Esperamos verte en nuestra boda para compartir momentos inolvidables juntos.\n\nFecha límite: 01/11\n\nSi no recibimos tu confirmación para esta fecha consideraremos que no podrás asistir, ¡así que confirma pronto!",
-                gallery_title: "Galería",
-                footer_title: "El gran día",
+                events_tag: "Confirma tu Asistencia",
+                rsvp_text1: "Nos encantaría poder compartir contigo este día tan especial.",
+                rsvp_text2: "Puedes confirmar tu asistencia hasta el día 11 de junio de 2026.",
+				colaboracion_tag: "Colaboraciones",
+				colab_text1: "Estamos muy emocionados de que nos acompañes en este día, y agradecemos que hayas decidido celebrar este día tan importante junto a nosotros.",
+				colab_text2: "Por si quisieras dejarnos un detalle, ¡estaríamos muy agradecidos!",
+				colab_nombre: "Nombre: Carolina Pallares",
+				colab_cuenta: "Número de cuenta: TBD",
+                gallery_title: "¿Qué visitar en Ecuador?",
                 footer_date: "11 . Julio . 2026",
-                footer_thanks: "¡Estamos muy emocionados de celebrar nuestro día especial con familia y amigos!"
+                footer_thanks: "¡Estamos muy emocionados de celebrar nuestro día con todos vosotros!"
             },
             en: {
                 location: "Quito \n Ecuador",
@@ -246,13 +269,17 @@
                 map_btn: "Get map & direction",
                 wedding_title: "Ceremony & Celebration",
                 wedding_body: "Saturday July 11th 2026, 12:30pm (GMT-5)\n\nHacienda Nápoles\nVia A Napoles, Puembo 170179, Ecuador.\n\nDress code: Formal. [No White]\n\nShuttle service:\nTBD",
-                events_tag: "Wedding events",
-                rsvp_intro: "Join us on our special day!",
-                rsvp_deadline_text: "We hope to see you at our wedding to share unforgettable moments together.\n\nDeadline: 01/11\n\nIf we don't receive your confirmation by this date we'll consider it as if you won't be attending, so RSVP soon!",
-                gallery_title: "Gallery",
-                footer_title: "The big day",
+                events_tag: "Confirma tu Asistencia",
+                rsvp_text1: "Nos encantaría poder compartir contigo este día tan especial.",
+                rsvp_text2: "Puedes confirmar tu asistencia hasta el día 11 de junio de 2026.",
+				colaboracion_tag: "Colaboraciones",
+				colab_text1: "Estamos muy emocionados de que nos acompañes en este día, y agradecemos que hayas decidido celebrar este día tan importante junto a nosotros.",
+				colab_text2: "Por si quisieras dejarnos un detalle, ¡estaríamos muy agradecidos!",
+				colab_nombre: "Carolina Pallares",
+				colab_cuenta: "TBD",
+                gallery_title: "¿Qué visitar en Ecuador?",
                 footer_date: "11 . July . 2026",
-                footer_thanks: "We are so excited to celebrate our special day with our family and friends!"
+                footer_thanks: "¡Estamos muy emocionados de celebrar nuestro día con todos vosotros!"
             }
         };
 
