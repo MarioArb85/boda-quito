@@ -10,24 +10,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Comfortaa:wght@300;400;700&family=Great+Vibes&display=swap" rel="stylesheet">
 
     <style>
-        /* --- VARIABLES & RESET --- */
         :root {
             --font-display: 'Amatic SC', cursive;
             --font-cursive: 'Great Vibes', cursive;
             --font-body: 'Comfortaa', cursive;
-            
-            --color-bg: #fff9f5; /* Crema suave */
-            --color-green: #5C6E52; /* Verde musgo/oliva */
+            --color-bg: #fff9f5;
+            --color-green: #5C6E52;
             --color-text: #333333;
             --color-white: #ffffff;
-            --color-accent: #E57373; /* Para enlaces/botones sutiles */
+            --color-accent: #E57373;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             background-color: var(--color-bg);
@@ -37,50 +31,10 @@
             overflow-x: hidden;
         }
 
-        /* --- TYPOGRAPHY --- */
-        h1, h2, h3 {
-            font-weight: 400;
-        }
+        h1, h2, h3 { font-weight: 400; }
+        .cursive-title { font-family: var(--font-cursive); font-size: 3rem; margin-bottom: 1rem; }
+        .display-title { font-family: var(--font-display); font-size: 7rem; letter-spacing: 2px; font-weight: 700; }
 
-        .cursive-title {
-            font-family: var(--font-cursive);
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .display-title {
-            font-family: var(--font-display);
-            font-size: 7rem;
-            letter-spacing: 2px;
-            font-weight: 700;
-        }
-
-        .text-body {
-            font-family: var(--font-body);
-            font-size: 0.9rem;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        /* --- LANGUAGE CONTROL --- */
-        [data-lang="es"] { display: none; }
-        
-        body.lang-es [data-lang="en"] { display: none; }
-        body.lang-es [data-lang="es"] { display: inline-block; } 
-        
-        div[data-lang], p[data-lang], h1[data-lang], h2[data-lang], button[data-lang] {
-            display: none;
-        }
-        body.lang-es div[data-lang="es"], 
-        body.lang-es p[data-lang="es"], 
-        body.lang-es h1[data-lang="es"],
-        body.lang-es h2[data-lang="es"],
-        body.lang-es button[data-lang="es"] { display: block; }
-
-        /* --- HEADER / HERO --- */
         header {
             height: 650px;
             background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('header.jpg');
@@ -99,8 +53,8 @@
             font-family: var(--font-cursive);
             font-size: 2rem;
             padding: 0 25px;
-			border-left: 2px solid white;
-			border-right: 2px solid white;
+            border-left: 2px solid white;
+            border-right: 2px solid white;
         }
 
         header .details {
@@ -112,19 +66,11 @@
             align-items: center;
         }
 
-        /* --- CHECKERBOARD SECTION --- */
-        .checkerboard {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .checkerboard-limited {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+        .checkerboard { display: flex; flex-wrap: wrap; }
+        .checkerboard-limited { max-width: 1200px; margin: 0 auto; }
 
         .cb-item {
-            flex: 0 0 calc(50% - 40px); /* 50% menos el margen total */
+            flex: 0 0 calc(50% - 40px);
             margin: 20px;
             min-height: 400px;
             display: flex;
@@ -136,19 +82,11 @@
             background-color: var(--color-white);
         }
 
-        .cb-image {
-            background-size: cover;
-            background-position: center;
-            padding: 0;
-        }
-
+        .cb-image { background-size: cover; background-position: center; padding: 0; }
         .img-1 { background-image: url('Finca Nápoles.jpg'); }
         .img-2 { background-image: url('museo de la ciudad.jpg'); }
 
-        .cb-text p {
-            margin-bottom: 20px;
-            font-size: 0.9rem;
-        }
+        .cb-text p { margin-bottom: 20px; font-size: 0.9rem; white-space: pre-line; }
 
         .btn-link {
             color: var(--color-accent);
@@ -159,16 +97,8 @@
             letter-spacing: 1px;
         }
 
-        /* --- GREEN SECTION (RSVP) --- */
-        .green-section {
-            background-color: var(--color-green);
-            color: var(--color-white);
-        }
-        
-        .green-section .cursive-title, 
-        .green-section p {
-            color: var(--color-white);
-        }
+        .green-section { background-color: var(--color-green); color: var(--color-white); }
+        .green-section .cursive-title, .green-section p { color: var(--color-white); }
 
         .rsvp-btn {
             background-color: var(--color-bg);
@@ -183,59 +113,15 @@
             transition: transform 0.2s;
         }
 
-        .rsvp-btn:hover {
-            transform: scale(1.05);
-        }
-
         .couple-img {
             background-image: url('https://images.unsplash.com/photo-1623861348339-446738c82ce0?q=80&w=1000&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
         }
 
-        /* --- GALLERY SECTION --- */
-        .gallery-section {
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        .gallery-nav {
-            margin: 30px 0;
-            border-top: 1px solid #ccc;
-            border-bottom: 1px solid #ccc;
-            padding: 15px 0;
-        }
-
-        .gallery-nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-        }
-
-        .gallery-nav li {
-            font-family: var(--font-body);
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            cursor: pointer;
-            color: #666;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .gallery-item {
-            aspect-ratio: 1; 
-            background-color: #ddd;
-            background-size: cover;
-            background-position: center;
-            border-radius: 4px;
-        }
+        .gallery-section { padding: 60px 20px; text-align: center; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; max-width: 1200px; margin: 0 auto; }
+        .gallery-item { aspect-ratio: 1; background-color: #ddd; background-size: cover; background-position: center; border-radius: 4px; }
         
         .g-1 { background-image: url('https://picsum.photos/400?random=1'); }
         .g-2 { background-image: url('https://picsum.photos/400?random=2'); }
@@ -246,7 +132,6 @@
         .g-7 { background-image: url('https://picsum.photos/400?random=7'); }
         .g-8 { background-image: url('https://picsum.photos/400?random=8'); }
 
-        /* --- FOOTER --- */
         footer {
             background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1511285560982-1351cdeb9821?q=80&w=1000&auto=format&fit=crop');
             background-size: cover;
@@ -256,33 +141,16 @@
             padding: 80px 20px;
         }
 
-        .footer-date {
-            font-family: var(--font-cursive);
-            font-size: 3rem;
-            margin: 20px 0;
-        }
+        .footer-date { font-family: var(--font-cursive); font-size: 3rem; margin: 20px 0; }
 
-        .footer-thanks {
-            font-family: var(--font-body);
-            font-size: 0.8rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* --- RESPONSIVE MEDIA QUERIES --- */
         @media (max-width: 768px) {
-			header {background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('header_mobile.jpg'); justify-content: space-between; padding: 10px;}
-            .display-title { font-size: 4rem;}
-            /* SOLUCIÓN: Ajuste de ancho en móvil restando márgenes */
-            .cb-item { flex: 0 0 calc(100% - 20px); min-height: 300px; margin: 10px;} 
-			.checkerboard-limited .checkerboard {margin: 0px}
-			.checkerboard-limited .checkerboard:last-of-type {flex-direction: column-reverse;}
-
+            header { background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('header_mobile.jpg'); justify-content: space-between; padding: 10px; }
+            .display-title { font-size: 4rem; }
+            .cb-item { flex: 0 0 calc(100% - 20px); min-height: 300px; margin: 10px; } 
+            .checkerboard-limited .checkerboard:last-of-type { flex-direction: column-reverse; }
             .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-
             header .details { flex-direction: column; gap: 5px; }
-            header .details span { border: none; }
-			header .details span.names { border-bottom: 1px solid #FFFFFF; border-top: 1px solid #FFFFFF; padding: 5px 0; }
+            header .details span.names { border-bottom: 1px solid #FFFFFF; border-top: 1px solid #FFFFFF; padding: 5px 0; }
         }
     </style>
 </head>
@@ -290,41 +158,19 @@
 
     <header>
         <h1 class="display-title">Save the Date</h1>
-                
         <div class="details">
-			<span>Quito <br> Ecuador</span>
-            <span data-lang="en" class="names">Mario and Carolina</span>
-			<span data-lang="es" class="names">Mario y Carolina</span>
-			<span data-lang="en">July 11th <br> 2026</span>
-            <span data-lang="es">11 de Julio <br> 2026</span>
+            <span data-translate="location"></span>
+            <span class="names" data-translate="names"></span>
+            <span data-translate="date_hero"></span>
         </div>
     </header>
 	
     <div class="checkerboard-limited">
         <section class="checkerboard">
             <div class="cb-item cb-text">
-                <h2 class="cursive-title" data-lang="en">Welcome Cocktail</h2>
-                <h2 class="cursive-title" data-lang="es">Cocktail de Bienvenida</h2>
-
-                <p data-lang="en">
-                    Jueves 9 de julio 2026, 20h (GMT-5)<br><br>
-                    Museo de la Ciudad<br>
-                    García Moreno, Quito 170405, Ecuador<br><br>
-					Dress code: Semi Formal. [No White]<br><br>
-					Servicio de autobuses:<br>
-					TBD
-                </p>
-                <p data-lang="es">
-                    Jueves 9 de julio 2026, 20h (GMT-5)<br><br>
-                    Museo de la Ciudad<br>
-                    García Moreno, Quito 170405, Ecuador<br><br>
-					Dress code: Semi Formal. [No White]<br><br>
-					Servicio de autobuses:<br>
-					TBD
-                </p>
-
-                <a href="https://www.google.com/maps/search/?api=1&query=Museo+de+la+Ciudad+Quito" target="_blank" class="btn-link" data-lang="en">Get map & direction</a>
-                <a href="https://www.google.com/maps/search/?api=1&query=Museo+de+la+Ciudad+Quito" target="_blank" class="btn-link" data-lang="es">Ver mapa y dirección</a>
+                <h2 class="cursive-title" data-translate="cocktail_title"></h2>
+                <p data-translate="cocktail_body"></p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Museo+de+la+Ciudad+Quito" target="_blank" class="btn-link" data-translate="map_btn"></a>
             </div>
             <div class="cb-item cb-image img-2"></div>
         </section>
@@ -332,28 +178,9 @@
         <section class="checkerboard">
             <div class="cb-item cb-image img-1"></div>
             <div class="cb-item cb-text">
-                <h2 class="cursive-title" data-lang="en">Ceremonia y Celebración</h2>
-                <h2 class="cursive-title" data-lang="es">Ceremonia y Celebración</h2>
-                
-                <p data-lang="en">
-                    Sábado 11 de julio 2026, 12:30h (GMT-5)<br><br>
-                    Hacienda Nápoles<br>
-                    Via A Napoles, Puembo 170179, Ecuador.<br><br>
-					Dress code: Formal. [No White]<br><br>
-					Servicio de autobuses:<br>
-					TBD
-                </p>
-                <p data-lang="es">
-                    Sábado 11 de julio 2026, 12:30h (GMT-5)<br><br>
-                    Hacienda Nápoles<br>
-                    Via A Napoles, Puembo 170179, Ecuador.<br><br>
-					Dress code: Formal. [No White]<br><br>
-					Servicio de autobuses:<br>
-					TBD
-                </p>
-
-                <a href="https://www.google.com/maps/search/?api=1&query=Hacienda+Napoles+Puembo" target="_blank" class="btn-link" data-lang="en">Get map & direction</a>
-                <a href="https://www.google.com/maps/search/?api=1&query=Hacienda+Napoles+Puembo" target="_blank" class="btn-link" data-lang="es">Ver mapa y dirección</a>
+                <h2 class="cursive-title" data-translate="wedding_title"></h2>
+                <p data-translate="wedding_body"></p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Hacienda+Napoles+Puembo" target="_blank" class="btn-link" data-translate="map_btn"></a>
             </div>
         </section>
     </div>
@@ -361,41 +188,18 @@
     <section class="checkerboard">
         <div class="cb-item green-section">
             <div style="background: white; padding: 5px 15px; display: inline-block; margin-bottom: 20px;">
-                <h2 class="cursive-title" style="color: var(--color-green); margin:0; font-size: 2rem;" data-lang="en">Wedding events</h2>
-                <h2 class="cursive-title" style="color: var(--color-green); margin:0; font-size: 2rem;" data-lang="es">Eventos de la boda</h2>
+                <h2 class="cursive-title" style="color: var(--color-green); margin:0; font-size: 2rem;" data-translate="events_tag"></h2>
             </div>
-
-            <p data-lang="en">Join us on our special day!</p>
-            <p data-lang="es">¡Únete a nosotros en nuestro día especial!</p>
-            
+            <p data-translate="rsvp_intro"></p>
             <br>
-            
-            <p style="font-size: 0.8rem;" data-lang="en">
-                We hope to see you at our wedding to share<br>
-                unforgettable moments together.<br><br>
-                <strong>Deadline:</strong> 01/11<br><br>
-                If we don't receive your confirmation by this<br>
-                date we'll consider it as if you won't be<br>
-                attending, so RSVP soon!
-            </p>
-            <p style="font-size: 0.8rem;" data-lang="es">
-                Esperamos verte en nuestra boda para compartir<br>
-                momentos inolvidables juntos.<br><br>
-                <strong>Fecha límite:</strong> 01/11<br><br>
-                Si no recibimos tu confirmación para esta<br>
-                fecha consideraremos que no podrás<br>
-                asistir, ¡así que confirma pronto!
-            </p>
-
+            <p style="font-size: 0.8rem;" data-translate="rsvp_deadline_text"></p>
             <button class="rsvp-btn">RSVP</button>
         </div>
         <div class="cb-item cb-image couple-img"></div>
     </section>
 
     <section class="gallery-section">
-        <h2 class="cursive-title" style="color: #333;" data-lang="en">Gallery</h2>
-        <h2 class="cursive-title" style="color: #333;" data-lang="es">Galería</h2>
-        
+        <h2 class="cursive-title" style="color: #333;" data-translate="gallery_title"></h2>
         <div class="gallery-grid">
             <div class="gallery-item g-1"></div>
             <div class="gallery-item g-2"></div>
@@ -409,28 +213,59 @@
     </section>
 
     <footer>
-        <h2 class="cursive-title" style="color: white;" data-lang="en">The big day</h2>
-        <h2 class="cursive-title" style="color: white;" data-lang="es">El gran día</h2>
-        
-        <div class="footer-date" data-lang="en">11 . July . 2026</div>
-        <div class="footer-date" data-lang="es">11 . Julio . 2026</div>
-        
-        <p class="footer-thanks" data-lang="en">
-            We are so excited to celebrate our special day with our family and friends!
-        </p>
-        <p class="footer-thanks" data-lang="es">
-            ¡Estamos muy emocionados de celebrar nuestro día especial con familia y amigos!
-        </p>
+        <h2 class="cursive-title" style="color: white;" data-translate="footer_title"></h2>
+        <div class="footer-date" data-translate="footer_date"></div>
+        <p class="footer-thanks" data-translate="footer_thanks"></p>
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const userLang = navigator.language || navigator.userLanguage;
-            if (userLang.startsWith('es')) {
-                document.body.classList.add('lang-es');
-            } else {
-                document.body.classList.add('lang-en');
+        const translations = {
+            es: {
+                location: "Quito \n Ecuador",
+                names: "Mario y Carolina",
+                date_hero: "11 de Julio \n 2026",
+                cocktail_title: "Cocktail de Bienvenida",
+                cocktail_body: "Jueves 9 de julio 2026, 20h (GMT-5)\n\nMuseo de la Ciudad\nGarcía Moreno, Quito 170405, Ecuador\n\nDress code: Semi Formal. [No White]\n\nServicio de autobuses:\nTBD",
+                map_btn: "Ver mapa y dirección",
+                wedding_title: "Ceremonia y Celebración",
+                wedding_body: "Sábado 11 de julio 2026, 12:30h (GMT-5)\n\nHacienda Nápoles\nVia A Napoles, Puembo 170179, Ecuador.\n\nDress code: Formal. [No White]\n\nServicio de autobuses:\nTBD",
+                events_tag: "Eventos de la boda",
+                rsvp_intro: "¡Únete a nosotros en nuestro día especial!",
+                rsvp_deadline_text: "Esperamos verte en nuestra boda para compartir momentos inolvidables juntos.\n\nFecha límite: 01/11\n\nSi no recibimos tu confirmación para esta fecha consideraremos que no podrás asistir, ¡así que confirma pronto!",
+                gallery_title: "Galería",
+                footer_title: "El gran día",
+                footer_date: "11 . Julio . 2026",
+                footer_thanks: "¡Estamos muy emocionados de celebrar nuestro día especial con familia y amigos!"
+            },
+            en: {
+                location: "Quito \n Ecuador",
+                names: "Mario and Carolina",
+                date_hero: "July 11th \n 2026",
+                cocktail_title: "Welcome Cocktail",
+                cocktail_body: "Thursday July 9th 2026, 8pm (GMT-5)\n\nMuseo de la Ciudad\nGarcía Moreno, Quito 170405, Ecuador\n\nDress code: Semi Formal. [No White]\n\nShuttle service:\nTBD",
+                map_btn: "Get map & direction",
+                wedding_title: "Ceremony & Celebration",
+                wedding_body: "Saturday July 11th 2026, 12:30pm (GMT-5)\n\nHacienda Nápoles\nVia A Napoles, Puembo 170179, Ecuador.\n\nDress code: Formal. [No White]\n\nShuttle service:\nTBD",
+                events_tag: "Wedding events",
+                rsvp_intro: "Join us on our special day!",
+                rsvp_deadline_text: "We hope to see you at our wedding to share unforgettable moments together.\n\nDeadline: 01/11\n\nIf we don't receive your confirmation by this date we'll consider it as if you won't be attending, so RSVP soon!",
+                gallery_title: "Gallery",
+                footer_title: "The big day",
+                footer_date: "11 . July . 2026",
+                footer_thanks: "We are so excited to celebrate our special day with our family and friends!"
             }
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const userLang = (navigator.language || navigator.userLanguage).startsWith('es') ? 'es' : 'en';
+            const langData = translations[userLang];
+
+            document.querySelectorAll('[data-translate]').forEach(el => {
+                const key = el.getAttribute('data-translate');
+                if (langData[key]) {
+                    el.innerText = langData[key];
+                }
+            });
         });
     </script>
 </body>
