@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boda Mario & Carolina</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Comfortaa:wght@300;400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --font-display: 'Amatic SC', cursive;
+            --font-cursive: 'Great Vibes', cursive;
+            --font-body: 'Comfortaa', cursive;
+            --color-bg: #fff9f5;
+            --color-green: #5C6E52;
+            --color-text: #333333;
+            --color-white: #ffffff;
+            --color-accent: #E57373;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 { font-weight: 400; }
+        .cursive-title { font-family: var(--font-cursive); font-size: 3rem; margin-bottom: 1rem; line-height: 60px;}
+        .display-title { font-family: var(--font-display); font-size: 7rem; letter-spacing: 2px; font-weight: 700; }
+
+        header {
+            height: 650px;
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('header.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            align-items: center;
+            color: var(--color-white);
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        header .names {
+            font-family: var(--font-cursive);
+            font-size: 2rem;
+            padding: 0 25px;
+            border-left: 2px solid white;
+            border-right: 2px solid white;
+        }
+
+        header .details {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            letter-spacing: 1px;
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .checkerboard { display: flex; flex-wrap: wrap; }
+        .checkerboard-limited { max-width: 1200px; margin: 0 auto; }
+
+        .cb-item {
+            flex: 0 0 calc(50% - 40px);
+            margin: 20px;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px;
+            background-color: var(--color-white);
+        }
+
+        .cb-image { background-size: cover; background-position: center; padding: 0; }
+        .img-1 { background-image: url('Finca Nápoles.jpg'); }
+        .img-2 { background-image: url('museo de la ciudad.jpg'); }
+
+        .cb-text p { margin-bottom: 20px; font-size: 0.9rem; white-space: pre-line; }
+
+        .btn-link {
+            color: var(--color-accent);
+            font-family: var(--font-body);
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .green-section { background-color: var(--color-green); color: var(--color-white); }
+        .green-section .cursive-title, .green-section p { color: var(--color-white); }
+
+        .rsvp-btn {
+            background-color: var(--color-bg);
+            color: var(--color-green);
+            border: none;
+            padding: 10px 40px;
+            border-radius: 20px;
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: transform 0.2s;
+        }
+
+        .couple-img {
+            background-image: url('https://images.unsplash.com/photo-1623861348339-446738c82ce0?q=80&w=1000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .gallery-section { padding: 60px 20px; text-align: center; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; max-width: 1200px; margin: 0 auto; }
+        .gallery-item { aspect-ratio: 1; background-color: #ddd; background-size: cover; background-position: center; border-radius: 4px; }
+        
+        .g-1 { background-image: url('https://picsum.photos/400?random=1'); }
+        .g-2 { background-image: url('https://picsum.photos/400?random=2'); }
+        .g-3 { background-image: url('https://picsum.photos/400?random=3'); }
+        .g-4 { background-image: url('https://picsum.photos/400?random=4'); }
+        .g-5 { background-image: url('https://picsum.photos/400?random=5'); }
+        .g-6 { background-image: url('https://picsum.photos/400?random=6'); }
+        .g-7 { background-image: url('https://picsum.photos/400?random=7'); }
+        .g-8 { background-image: url('https://picsum.photos/400?random=8'); }
+
+        footer {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1511285560982-1351cdeb9821?q=80&w=1000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .footer-date { font-family: var(--font-cursive); font-size: 3rem; margin: 20px 0; }
+
+        @media (max-width: 768px) {
+            header { background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('header_mobile.jpg'); justify-content: space-between; padding: 10px; }
+            .display-title { font-size: 4rem; }
+            .cb-item { flex: 0 0 calc(100% - 20px); min-height: 300px; margin: 10px; } 
+            .checkerboard-limited .checkerboard:last-of-type { flex-direction: column-reverse; }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+            header .details { flex-direction: column; gap: 5px; }
+            header .details span.names { border-bottom: 1px solid #FFFFFF; border-top: 1px solid #FFFFFF; padding: 5px 0; border-left: 0px; border-right: 0px;}
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="display-title">Save the Date</h1>
+        <div class="details">
+            <span data-translate="location"></span>
+            <span class="names" data-translate="names"></span>
+            <span data-translate="date_hero"></span>
+        </div>
+    </header>
+	
+    <div class="checkerboard-limited">
+        <section class="checkerboard">
+            <div class="cb-item cb-text">
+                <h2 class="cursive-title" data-translate="cocktail_title"></h2>
+                <p data-translate="cocktail_body"></p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Museo+de+la+Ciudad+Quito" target="_blank" class="btn-link" data-translate="map_btn"></a>
+            </div>
+            <div class="cb-item cb-image img-2"></div>
+        </section>
+
+        <section class="checkerboard">
+            <div class="cb-item cb-image img-1"></div>
+            <div class="cb-item cb-text">
+                <h2 class="cursive-title" data-translate="wedding_title"></h2>
+                <p data-translate="wedding_body"></p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Hacienda+Napoles+Puembo" target="_blank" class="btn-link" data-translate="map_btn"></a>
+            </div>
+        </section>
+    </div>
+
+    <section class="checkerboard">
+        <div class="cb-item green-section">
+            <div style="background: white; padding: 5px 15px; display: inline-block; margin-bottom: 20px;">
+                <h2 class="cursive-title" style="color: var(--color-green); margin:0; font-size: 2rem;" data-translate="events_tag"></h2>
+            </div>
+            <p data-translate="rsvp_intro"></p>
+            <br>
+            <p style="font-size: 0.8rem;" data-translate="rsvp_deadline_text"></p>
+            <button class="rsvp-btn">RSVP</button>
+        </div>
+        <div class="cb-item cb-image couple-img"></div>
+    </section>
+
+    <section class="gallery-section">
+        <h2 class="cursive-title" style="color: #333;" data-translate="gallery_title"></h2>
+        <div class="gallery-grid">
+            <div class="gallery-item g-1"></div>
+            <div class="gallery-item g-2"></div>
+            <div class="gallery-item g-3"></div>
+            <div class="gallery-item g-4"></div>
+            <div class="gallery-item g-5"></div>
+            <div class="gallery-item g-6"></div>
+            <div class="gallery-item g-7"></div>
+            <div class="gallery-item g-8"></div>
+        </div>
+    </section>
+
+    <footer>
+        <h2 class="cursive-title" style="color: white;" data-translate="footer_title"></h2>
+        <div class="footer-date" data-translate="footer_date"></div>
+        <p class="footer-thanks" data-translate="footer_thanks"></p>
+    </footer>
+
+    <script>
+        const translations = {
+            es: {
+                location: "Quito \n Ecuador",
+                names: "Mario y Carolina",
+                date_hero: "11 de Julio \n 2026",
+                cocktail_title: "Cocktail de Bienvenida",
+                cocktail_body: "Jueves 9 de julio 2026, 20h (GMT-5)\n\nMuseo de la Ciudad\nGarcía Moreno, Quito 170405, Ecuador\n\nDress code: Semi Formal. [No White]\n\nServicio de autobuses:\nTBD",
+                map_btn: "Ver mapa y dirección",
+                wedding_title: "Ceremonia y Celebración",
+                wedding_body: "Sábado 11 de julio 2026, 12:30h (GMT-5)\n\nHacienda Nápoles\nVia A Napoles, Puembo 170179, Ecuador.\n\nDress code: Formal. [No White]\n\nServicio de autobuses:\nTBD",
+                events_tag: "Eventos de la boda",
+                rsvp_intro: "¡Únete a nosotros en nuestro día especial!",
+                rsvp_deadline_text: "Esperamos verte en nuestra boda para compartir momentos inolvidables juntos.\n\nFecha límite: 01/11\n\nSi no recibimos tu confirmación para esta fecha consideraremos que no podrás asistir, ¡así que confirma pronto!",
+                gallery_title: "Galería",
+                footer_title: "El gran día",
+                footer_date: "11 . Julio . 2026",
+                footer_thanks: "¡Estamos muy emocionados de celebrar nuestro día especial con familia y amigos!"
+            },
+            en: {
+                location: "Quito \n Ecuador",
+                names: "Mario and Carolina",
+                date_hero: "July 11th \n 2026",
+                cocktail_title: "Welcome Cocktail",
+                cocktail_body: "Thursday July 9th 2026, 8pm (GMT-5)\n\nMuseo de la Ciudad\nGarcía Moreno, Quito 170405, Ecuador\n\nDress code: Semi Formal. [No White]\n\nShuttle service:\nTBD",
+                map_btn: "Get map & direction",
+                wedding_title: "Ceremony & Celebration",
+                wedding_body: "Saturday July 11th 2026, 12:30pm (GMT-5)\n\nHacienda Nápoles\nVia A Napoles, Puembo 170179, Ecuador.\n\nDress code: Formal. [No White]\n\nShuttle service:\nTBD",
+                events_tag: "Wedding events",
+                rsvp_intro: "Join us on our special day!",
+                rsvp_deadline_text: "We hope to see you at our wedding to share unforgettable moments together.\n\nDeadline: 01/11\n\nIf we don't receive your confirmation by this date we'll consider it as if you won't be attending, so RSVP soon!",
+                gallery_title: "Gallery",
+                footer_title: "The big day",
+                footer_date: "11 . July . 2026",
+                footer_thanks: "We are so excited to celebrate our special day with our family and friends!"
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const userLang = (navigator.language || navigator.userLanguage).startsWith('es') ? 'es' : 'en';
+            const langData = translations[userLang];
+
+            document.querySelectorAll('[data-translate]').forEach(el => {
+                const key = el.getAttribute('data-translate');
+                if (langData[key]) {
+                    el.innerText = langData[key];
+                }
+            });
+        });
+    </script>
+</body>
+</html>
