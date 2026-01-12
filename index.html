@@ -98,15 +98,20 @@
         }
 
         .green-section {flex: 35%; min-height: auto; background-color: var(--color-green); color: var(--color-white); margin: 0; justify-content: start;}
-        .green-section .cursive-title, .green-section p { color: var(--color-white); }
+        .green-section p { font-size: 0.9rem; white-space: pre-line; }
+		.green-section .cursive-title, .green-section p { color: var(--color-white); }
 
         .rsvp-btn {
             background-color: var(--color-bg);
             color: var(--color-green);
             border: 2px solid var(--color-bg);
-            padding: 10px 40px;
-            border-radius: 20px;
-            font-size: 1.5rem;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-family: var(--font-body);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             cursor: pointer;
             margin-top: 30px;
             transition: all 0.3s ease;
@@ -128,18 +133,107 @@
             background-position: center;
         }
 
-        .gallery-section { padding: 60px 20px; text-align: center; }
-        .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; max-width: 1200px; margin: 0 auto; }
-        .gallery-item { aspect-ratio: 1; background-color: #ddd; background-size: cover; background-position: center; border-radius: 4px; }
+        .gallery-section { padding: 40px; text-align: center; background-color: #ffffff; max-width: 1160px; margin: 20px auto; }
         
-        .g-1 { background-image: url('https://picsum.photos/400?random=1'); }
-        .g-2 { background-image: url('https://picsum.photos/400?random=2'); }
-        .g-3 { background-image: url('https://picsum.photos/400?random=3'); }
-        .g-4 { background-image: url('https://picsum.photos/400?random=4'); }
-        .g-5 { background-image: url('https://picsum.photos/400?random=5'); }
-        .g-6 { background-image: url('https://picsum.photos/400?random=6'); }
-        .g-7 { background-image: url('https://picsum.photos/400?random=7'); }
-        .g-8 { background-image: url('https://picsum.photos/400?random=8'); }
+        .tabs-container {
+            max-width: 1200px;
+            margin: 40px auto 0 auto;
+        }
+
+        .tabs-menu {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 12px 30px;
+            border: 2px solid var(--color-green);
+            background: transparent;
+            color: var(--color-green);
+            cursor: pointer;
+            font-family: var(--font-body);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border-radius: 50px;
+        }
+
+        .tab-btn:hover {
+            background-color: var(--color-green);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .tab-btn.active {
+            background-color: var(--color-green);
+            color: white;
+        }
+
+        .tab-content {
+            display: none;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .tab-content.active {
+            display: grid;
+        }
+
+        .mosaik-card {
+            position: relative;
+            aspect-ratio: 3/4;
+            overflow: hidden;
+            border-radius: 4px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mosaik-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.6s ease;
+        }
+
+        .mosaik-card .card-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.5s ease;
+            z-index: 1;
+        }
+
+        .mosaik-card h4 {
+            color: white;
+            font-family: var(--font-display);
+            font-size: 3rem;
+            text-align: center;
+            padding: 20px;
+            line-height: 1;
+        }
+
+        .mosaik-card:hover img {
+            transform: scale(1.15);
+            filter: blur(5px);
+        }
+
+        .mosaik-card:hover .card-overlay {
+            background: rgba(0, 0, 0, 0.4);
+        }
 
         footer {
             background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('footer.jpg');
@@ -147,19 +241,79 @@
             background-position: center;
             color: white;
             text-align: center;
-            padding: 80px 20px;
+            padding: 40px;
         }
 
-        .footer-date { font-family: var(--font-cursive); font-size: 3rem; margin: 20px 0; }
+        .countdown-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 125px;
+            margin-top: 60px;
+            flex-wrap: wrap;
+        }
+
+        .count-text {
+            font-family: var(--font-cursive);
+            font-size: 2.2rem;
+            color: var(--color-white);
+        }
+
+        .timer-display {
+            display: flex;
+            gap: 20px;
+        }
+
+        .timer-segment {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 60px;
+        }
+
+        .timer-segment .number {
+            font-family: var(--font-body); /* Comfortaa */
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .timer-segment .label {
+            font-family: var(--font-body);
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 8px;
+            opacity: 0.9;
+        }
+
+        .footer-date { font-family: var(--font-cursive); font-size: 3rem; margin-bottom: 20px; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 1024px) {
+            .tab-content { grid-template-columns: repeat(2, 1fr); }
+        }
 
         @media (max-width: 768px) {
             header { background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('header_mobile.jpg'); justify-content: space-between; padding: 10px; }
             .display-title { font-size: 4rem; }
-            .cb-item { flex: 0 0 calc(100% - 20px); min-height: 300px; margin: 10px; } 
+            .cb-item { flex: 0 0 calc(100% - 40px); min-height: 300px; margin: 20px; } 
             .checkerboard-limited .checkerboard:last-of-type { flex-direction: column-reverse; }
-            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
             header .details { flex-direction: column; gap: 5px; }
             header .details span.names { border-bottom: 1px solid #FFFFFF; border-top: 1px solid #FFFFFF; padding: 5px 0; border-left: 0px; border-right: 0px;}
+			.gallery-section { margin: 20px; }
+            .countdown-wrapper { flex-direction: column; gap: 25px; }
+            .count-text { font-size: 1.8rem; }
+        }
+
+        @media (max-width: 600px) {
+            .tab-content { grid-template-columns: 1fr; }
+            .tab-btn { width: 100%; text-align: center; }
+            .rsvp-btn { width: 100%; } 
         }
     </style>
 </head>
@@ -220,24 +374,134 @@
 
     <section class="gallery-section">
         <h2 class="cursive-title" style="color: #333;" data-translate="gallery_title"></h2>
-        <div class="gallery-grid">
-            <div class="gallery-item g-1"></div>
-            <div class="gallery-item g-2"></div>
-            <div class="gallery-item g-3"></div>
-            <div class="gallery-item g-4"></div>
-            <div class="gallery-item g-5"></div>
-            <div class="gallery-item g-6"></div>
-            <div class="gallery-item g-7"></div>
-            <div class="gallery-item g-8"></div>
+        
+        <div class="tabs-container">
+            <div class="tabs-menu">
+                <button class="tab-btn active" onclick="openTab(event, 'quito')">Quito</button>
+                <button class="tab-btn" onclick="openTab(event, 'andes')">Los Andes</button>
+                <button class="tab-btn" onclick="openTab(event, 'costa')">La Costa</button>
+                <button class="tab-btn" onclick="openTab(event, 'galapagos')">Galápagos</button>
+            </div>
+
+            <div id="quito" class="tab-content active">
+                <a href="#" class="mosaik-card">
+                    <img src="https://picsum.photos/600/800?random=11" alt="Centro Histórico">
+                    <div class="card-overlay"><h4>Centro Histórico</h4></div>
+                </a>
+                <a href="#" class="mosaik-card">
+                    <img src="https://picsum.photos/600/800?random=12" alt="La Mitad del Mundo">
+                    <div class="card-overlay"><h4>Mitad del Mundo</h4></div>
+                </a>
+                <a href="#" class="mosaik-card">
+                    <img src="https://picsum.photos/600/800?random=13" alt="Teleférico">
+                    <div class="card-overlay"><h4>Teleférico</h4></div>
+                </a>
+                <a href="#" class="mosaik-card">
+                    <img src="https://picsum.photos/600/800?random=14" alt="Guápulo">
+                    <div class="card-overlay"><h4>Guápulo</h4></div>
+                </a>
+            </div>
+
+            <div id="andes" class="tab-content">
+                <a href="#" class="mosaik-card">
+                    <img src="https://picsum.photos/600/800?random=21" alt="Cotopaxi">
+                    <div class="card-overlay"><h4>Volcán Cotopaxi</h4></div>
+                </a>
+                <a href="#" class="mosaik-card">
+                    <img src="https://picsum.photos/600/800?random=22" alt="Quilotoa">
+                    <div class="card-overlay"><h4>Laguna Quilotoa</h4></div>
+                </a>
+                <a href="#" class="mosaik-card">
+                    <img src="https://picsum.photos/600/800?random=23" alt="Baños">
+                    <div class="card-overlay"><h4>Baños</h4></div>
+                </a>
+                <a href="#" class="mosaik-card">
+                    <img src="https://picsum.photos/600/800?random=24" alt="Otavalo">
+                    <div class="card-overlay"><h4>Otavalo</h4></div>
+                </a>
+            </div>
+
+            <div id="costa" class="tab-content">
+                <a href="#" class="mosaik-card">
+                    <img src="https://picsum.photos/600/800?random=31" alt="Guayaquil">
+                    <div class="card-overlay"><h4>Guayaquil</h4></div>
+                </a>
+                <a href="#" class="mosaik-card">
+                    <img src="https://picsum.photos/600/800?random=32" alt="Ayangue">
+                    <div class="card-overlay"><h4>Ayangue</h4></div>
+                </a>
+                <a href="#" class="mosaik-card">
+                    <img src="https://picsum.photos/600/800?random=33" alt="Montañita">
+                    <div class="card-overlay"><h4>Montañita</h4></div>
+                </a>
+                <a href="#" class="mosaik-card">
+                    <img src="https://picsum.photos/600/800?random=34" alt="Manta">
+                    <div class="card-overlay"><h4>Manta</h4></div>
+                </a>
+            </div>
+
+            <div id="galapagos" class="tab-content">
+                <a href="#" class="mosaik-card">
+                    <img src="https://picsum.photos/600/800?random=41" alt="Santa Cruz">
+                    <div class="card-overlay"><h4>Isla Santa Cruz</h4></div>
+                </a>
+                <a href="#" class="mosaik-card">
+                    <img src="https://picsum.photos/600/800?random=42" alt="Isabela">
+                    <div class="card-overlay"><h4>Isla Isabela</h4></div>
+                </a>
+                <a href="#" class="mosaik-card">
+                    <img src="https://picsum.photos/600/800?random=43" alt="San Cristobal">
+                    <div class="card-overlay"><h4>San Cristóbal</h4></div>
+                </a>
+                <a href="#" class="mosaik-card">
+                    <img src="https://picsum.photos/600/800?random=44" alt="Bartolome">
+                    <div class="card-overlay"><h4>Isla Bartolomé</h4></div>
+                </a>
+            </div>
         </div>
     </section>
 
     <footer>
         <div class="footer-date" data-translate="footer_date"></div>
         <p class="footer-thanks" data-translate="footer_thanks"></p>
+		
+		<div class="countdown-wrapper">
+            <span class="count-text" data-translate="count_pre"></span>
+            <div class="timer-display">
+                <div class="timer-segment">
+                    <span class="number" id="days">00</span>
+                    <span class="label" data-translate="days_label"></span>
+                </div>
+                <div class="timer-segment">
+                    <span class="number" id="hours">00</span>
+                    <span class="label" data-translate="hours_label"></span>
+                </div>
+                <div class="timer-segment">
+                    <span class="number" id="minutes">00</span>
+                    <span class="label" data-translate="mins_label"></span>
+                </div>
+            </div>
+            <span class="count-text" data-translate="count_post"></span>
+        </div>
     </footer>
 
     <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "grid";
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.className += " active";
+        }
+
         const translations = {
             es: {
                 location: "Quito \n Ecuador",
@@ -258,7 +522,12 @@
 				colab_cuenta: "Número de cuenta: TBD",
                 gallery_title: "¿Qué visitar en Ecuador?",
                 footer_date: "11 . Julio . 2026",
-                footer_thanks: "¡Estamos muy emocionados de celebrar nuestro día con todos vosotros!"
+                footer_thanks: "¡Estamos muy emocionados de celebrar nuestro día con todos vosotros!",
+                count_pre: "Solo unas hora...",
+                count_post: "...¡para casarnos!",
+                days_label: "Días",
+                hours_label: "Horas",
+                mins_label: "Minutos"
             },
             en: {
                 location: "Quito \n Ecuador",
@@ -269,19 +538,43 @@
                 map_btn: "Get map & direction",
                 wedding_title: "Ceremony & Celebration",
                 wedding_body: "Saturday July 11th 2026, 12:30pm (GMT-5)\n\nHacienda Nápoles\nVia A Napoles, Puembo 170179, Ecuador.\n\nDress code: Formal. [No White]\n\nShuttle service:\nTBD",
-                events_tag: "Confirma tu Asistencia",
-                rsvp_text1: "Nos encantaría poder compartir contigo este día tan especial.",
-                rsvp_text2: "Puedes confirmar tu asistencia hasta el día 11 de junio de 2026.",
-				colaboracion_tag: "Colaboraciones",
-				colab_text1: "Estamos muy emocionados de que nos acompañes en este día, y agradecemos que hayas decidido celebrar este día tan importante junto a nosotros.",
-				colab_text2: "Por si quisieras dejarnos un detalle, ¡estaríamos muy agradecidos!",
-				colab_nombre: "Carolina Pallares",
-				colab_cuenta: "TBD",
-                gallery_title: "¿Qué visitar en Ecuador?",
+                events_tag: "RSVP",
+                rsvp_text1: "We would love for you to share this special day with us.",
+                rsvp_text2: "You can confirm your attendance until June 11th, 2026.",
+				colaboracion_tag: "Registry",
+				colab_text1: "We are very excited to have you join us and appreciate your decision to celebrate this important day with us.",
+				colab_text2: "If you'd like to leave us a gift, we would be very grateful!",
+				colab_nombre: "Name: Carolina Pallares",
+				colab_cuenta: "Account Number: TBD",
+                gallery_title: "What to visit in Ecuador?",
                 footer_date: "11 . July . 2026",
-                footer_thanks: "¡Estamos muy emocionados de celebrar nuestro día con todos vosotros!"
+                footer_thanks: "We are so excited to celebrate our day with all of you!",
+                count_pre: "Just some hours...",
+                count_post: "...until we get married!",
+                days_label: "Days",
+                hours_label: "Hours",
+                mins_label: "Minutes"
             }
         };
+
+        function updateCountdown() {
+            const weddingDate = new Date("July 11, 2026 12:30:00").getTime();
+            const now = new Date().getTime();
+            const diff = weddingDate - now;
+
+            if (diff <= 0) {
+                document.querySelector(".countdown-wrapper").style.display = "none";
+                return;
+            }
+
+            const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+
+            document.getElementById("days").innerText = d.toString().padStart(2, '0');
+            document.getElementById("hours").innerText = h.toString().padStart(2, '0');
+            document.getElementById("minutes").innerText = m.toString().padStart(2, '0');
+        }
 
         document.addEventListener('DOMContentLoaded', () => {
             const userLang = (navigator.language || navigator.userLanguage).startsWith('es') ? 'es' : 'en';
@@ -293,6 +586,10 @@
                     el.innerText = langData[key];
                 }
             });
+
+            // Iniciar y actualizar contador
+            updateCountdown();
+            setInterval(updateCountdown, 60000); // Actualiza cada minuto
         });
     </script>
 </body>
