@@ -35,6 +35,19 @@
         .cursive-title { font-family: var(--font-cursive); font-size: 3rem; margin-bottom: 1rem; line-height: 60px;}
         .display-title { font-family: var(--font-display); font-size: 7rem; letter-spacing: 2px; font-weight: 700; }
 
+        /* Efecto Hover para todas las etiquetas A */
+        a {
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        a:hover {
+            color: var(--color-green);
+            transform: translateY(-2px);
+            opacity: 0.8;
+        }
+
         header {
             height: 650px;
             background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('header.jpg');
@@ -67,7 +80,7 @@
         }
 
         .checkerboard { display: flex; flex-wrap: wrap; }
-        .checkerboard-limited { max-width: 1200px; margin: 0 auto; }
+        .checkerboard-limited { max-width: 1240px; margin: 20px auto; }
 
         .cb-item {
             flex: 0 0 calc(50% - 40px);
@@ -100,6 +113,10 @@
         .green-section {flex: 35%; min-height: auto; background-color: var(--color-green); color: var(--color-white); margin: 0; justify-content: start;}
         .green-section p { font-size: 0.9rem; white-space: pre-line; }
 		.green-section .cursive-title, .green-section p { color: var(--color-white); }
+		
+		.green-section .colab { background-color: var(--color-white); width: 100%; padding: 20px; text-align: left; border-radius: 8px; }
+		.green-section .colab span { color: var(--color-text); line-height: 30px; font-family: var(--font-body); font-size: 0.9rem;}
+		.green-section .colab span.bold { font-weight: 700; }
 
         .rsvp-btn {
             background-color: var(--color-bg);
@@ -133,7 +150,29 @@
             background-position: center;
         }
 
-        .gallery-section { padding: 40px; text-align: center; background-color: #ffffff; max-width: 1160px; margin: 20px auto; }
+        .stay-section { 
+            max-width: 1200px; 
+            margin: 40px auto; 
+            padding: 40px; 
+            background-color: #ffffff; 
+        }
+
+        .stay-content { 
+            display: flex; 
+            gap: 40px; 
+            align-items: center; 
+            margin-top: 10px;
+        }
+
+        .stay-image { flex: 1; }
+        .stay-image img { width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        
+        .stay-text { flex: 1; text-align: left; }
+        .stay-text .cursive-title { margin-bottom: 20px; color: #333; }
+        .stay-text p { margin-bottom: 15px; font-size: 0.9rem; }
+        .stay-text .stay-extra { font-size: 0.85rem; border-top: 1px solid #eee; pt: 15px; margin-top: 10px; padding-top: 15px;}
+
+        .gallery-section { padding: 40px; text-align: center; background-color: #ffffff; max-width: 1200px; margin: 20px auto; }
         
         .tabs-container {
             max-width: 1200px;
@@ -299,13 +338,19 @@
         }
 
         @media (max-width: 768px) {
-            header { background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('header_mobile.jpg'); justify-content: space-between; padding: 10px; }
+            header { background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('header_mobile.jpg'); justify-content: space-between; padding: 10px; margin-bottom: 20px; }
             .display-title { font-size: 4rem; }
             .cb-item { flex: 0 0 calc(100% - 40px); min-height: 300px; margin: 20px; } 
+			.checkerboard-limited { margin: 0 auto; }
             .checkerboard-limited .checkerboard:last-of-type { flex-direction: column-reverse; }
             header .details { flex-direction: column; gap: 5px; }
             header .details span.names { border-bottom: 1px solid #FFFFFF; border-top: 1px solid #FFFFFF; padding: 5px 0; border-left: 0px; border-right: 0px;}
-			.gallery-section { margin: 20px; }
+			
+            .stay-content { flex-direction: column-reverse; text-align: center; gap: 30px; }
+            .stay-text { text-align: center; }
+            .stay-section { margin: 20px; padding: 20px; }
+            
+            .gallery-section { margin: 40px 20px; }
             .countdown-wrapper { flex-direction: column; gap: 25px; }
             .count-text { font-size: 1.8rem; }
         }
@@ -333,7 +378,7 @@
             <div class="cb-item cb-text">
                 <h2 class="cursive-title" data-translate="cocktail_title"></h2>
                 <p data-translate="cocktail_body"></p>
-                <a href="https://www.google.com/maps/search/?api=1&query=Museo+de+la+Ciudad+Quito" target="_blank" class="btn-link" data-translate="map_btn"></a>
+                <a href="museo de la ciudad.jpg" target="_blank" class="btn-link" data-translate="map_btn"></a>
             </div>
             <div class="cb-item cb-image img-2"></div>
         </section>
@@ -343,7 +388,7 @@
             <div class="cb-item cb-text">
                 <h2 class="cursive-title" data-translate="wedding_title"></h2>
                 <p data-translate="wedding_body"></p>
-                <a href="https://www.google.com/maps/search/?api=1&query=Hacienda+Napoles+Puembo" target="_blank" class="btn-link" data-translate="map_btn"></a>
+                <a href="Finca Nápoles1.jpg" target="_blank" class="btn-link" data-translate="map_btn"></a>
             </div>
         </section>
     </div>
@@ -367,10 +412,33 @@
 			<br>
 			<p data-translate="colab_text2"></p>
 			<br>
-			<p data-translate="colab_nombre"></p>
-			<p data-translate="colab_cuenta"></p>
+			<div class="colab">			
+				<span class="bold" data-translate="colab_pre_nombre"></span><span data-translate="colab_nombre"></span>
+				<br>
+				<span class="bold" data-translate="colab_pre_cuenta"></span><span data-translate="colab_cuenta"></span>
+			</div>
         </div>
     </section>
+
+    <section class="stay-section">
+        <div class="stay-content">
+            <div class="stay-image">
+                <img src="hampton by hilton quito la carolina.jpg" alt="Hampton by Hilton Quito">
+            </div>
+            <div class="stay-text">
+                <h2 class="cursive-title" data-translate="stay_title"></h2>
+                <p data-translate="stay_p1"></p>
+                <p data-translate="stay_p2"></p>
+                <a href="hampton by hilton quito la carolina.jpg" target="_blank" class="btn-link" data-translate="stay_link"></a>
+                
+                <div class="stay-extra">
+                    <p data-translate="stay_extra_text"></p>
+                    <a href="#quito" class="btn-link" style="font-size: 0.65rem;" data-translate="stay_extra_link"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <section class="gallery-section">
         <h2 class="cursive-title" style="color: #333;" data-translate="gallery_title"></h2>
@@ -518,8 +586,16 @@
 				colaboracion_tag: "Colaboraciones",
 				colab_text1: "Estamos muy emocionados de que nos acompañes en este día, y agradecemos que hayas decidido celebrar este día tan importante junto a nosotros.",
 				colab_text2: "Por si quisieras dejarnos un detalle, ¡estaríamos muy agradecidos!",
-				colab_nombre: "Nombre: Carolina Pallares",
-				colab_cuenta: "Número de cuenta: TBD",
+				colab_pre_nombre: "Nombre: ",
+				colab_nombre: "Carolina Pallares",
+				colab_pre_cuenta: "Número de cuenta: ",
+				colab_cuenta: "TBD",
+                stay_title: "Estancia en Quito",
+                stay_p1: "Para vuestra comodidad, os recomendamos el hotel Hampton by Hilton Quito La Carolina, ubicado cerca de parques y restaurantes.",
+                stay_p2: "Hemos gestionado una tarifa preferencial para nuestros invitados. Podéis reservar directamente aquí:",
+                stay_link: "Reservar hotel aquí",
+                stay_extra_text: "También os recomendamos otras zonas increíbles para alojarse en la sección:",
+                stay_extra_link: "Ver recomendaciones en Quito",
                 gallery_title: "¿Qué visitar en Ecuador?",
                 footer_date: "11 . Julio . 2026",
                 footer_thanks: "¡Estamos muy emocionados de celebrar nuestro día con todos vosotros!",
@@ -544,8 +620,16 @@
 				colaboracion_tag: "Registry",
 				colab_text1: "We are very excited to have you join us and appreciate your decision to celebrate this important day with us.",
 				colab_text2: "If you'd like to leave us a gift, we would be very grateful!",
-				colab_nombre: "Name: Carolina Pallares",
-				colab_cuenta: "Account Number: TBD",
+				colab_pre_nombre: "Name: ",
+				colab_nombre: "Carolina Pallares",
+				colab_pre_cuenta: "Account Number: ",
+				colab_cuenta: "TBD",
+                stay_title: "Stay in Quito",
+                stay_p1: "For your convenience, we recommend the Hampton by Hilton Quito La Carolina hotel, located near parks and restaurants.",
+                stay_p2: "We have arranged a special rate for our guests. You can book directly here:",
+                stay_link: "Book hotel here",
+                stay_extra_text: "We also recommend other great areas to stay in the section:",
+                stay_extra_link: "See Quito recommendations",
                 gallery_title: "What to visit in Ecuador?",
                 footer_date: "11 . July . 2026",
                 footer_thanks: "We are so excited to celebrate our day with all of you!",
@@ -553,7 +637,7 @@
                 count_post: "...until we get married!",
                 days_label: "Days",
                 hours_label: "Hours",
-                mins_label: "Minutes"
+                mins_label: "Minutos"
             }
         };
 
@@ -587,9 +671,8 @@
                 }
             });
 
-            // Iniciar y actualizar contador
             updateCountdown();
-            setInterval(updateCountdown, 60000); // Actualiza cada minuto
+            setInterval(updateCountdown, 60000);
         });
     </script>
 </body>
