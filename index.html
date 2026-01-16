@@ -19,6 +19,7 @@
             --color-text: #333333;
             --color-white: #ffffff;
             --color-accent: #E57373;
+			--color-colab: #EBEDE9;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -35,7 +36,6 @@
         .cursive-title { font-family: var(--font-cursive); font-size: 3rem; margin-bottom: 1rem; line-height: 60px;}
         .display-title { font-family: var(--font-display); font-size: 7rem; letter-spacing: 2px; font-weight: 700; }
 
-        /* Efecto Hover para todas las etiquetas A */
         a {
             text-decoration: none;
             transition: all 0.3s ease;
@@ -43,14 +43,13 @@
         }
 
         a:hover {
-            color: var(--color-green);
             transform: translateY(-2px);
             opacity: 0.8;
         }
 
         header {
             height: 650px;
-            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('header.jpg');
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('img/home/header.jpg');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -88,18 +87,27 @@
             min-height: 400px;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
+            justify-content: start;
             padding: 40px;
             background-color: var(--color-white);
         }
+		
+		.cb-item:first-of-type { align-items: end; text-align: right; }
+		.cb-item:last-of-type { align-items: start; text-align: left; }
 
         .cb-image { background-size: cover; background-position: center; padding: 0; }
-        .img-1 { background-image: url('Finca Nápoles1.jpg'); }
-        .img-2 { background-image: url('museo de la ciudad.jpg'); }
+        .img-1 { background-image: url('img/home/finca_napoles.jpg'); }
+        .img-2 { background-image: url('img/home/museo_de_la_ciudad.jpg'); }
+		.img-3 { background-image: url('img/home/confirma_tu_asistencia.jpg'); }
+		.img-4 { background-image: url('img/home/colaboraciones.png'); }
 
-        .cb-text p { margin-bottom: 20px; font-size: 0.9rem; white-space: pre-line; }
+        .cb-text p { margin-bottom: 20px; font-size: 0.9rem; }
+		.cb-text .subtitle { color: var(--color-green); font-size: 0.9rem; font-weight: 700; }
+		.cb-text .subtitle:not(:first-child) { margin-top: 15px; }
+		.cb-text .text { font-size: 0.9rem; }
+		
+		.cb-confirm .text:not(:first-of-type), .cb-collab .text:not(:first-of-type), .stay-text .text:not(:first-of-type) { margin-top: 15px; }
+		.cb-confirm .tab-btn { margin-top: 30px; }
 
         .btn-link {
             color: var(--color-accent);
@@ -108,15 +116,12 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1px;
+			margin-top: 30px;
         }
-
-        .green-section {flex: 35%; min-height: auto; background-color: var(--color-green); color: var(--color-white); margin: 0; justify-content: start;}
-        .green-section p { font-size: 0.9rem; white-space: pre-line; }
-		.green-section .cursive-title, .green-section p { color: var(--color-white); }
 		
-		.green-section .colab { background-color: var(--color-white); width: 100%; padding: 20px; text-align: left; border-radius: 8px; }
-		.green-section .colab span { color: var(--color-text); line-height: 30px; font-family: var(--font-body); font-size: 0.9rem;}
-		.green-section .colab span.bold { font-weight: 700; }
+		.colab { background-color: var(--color-colab); width: 100%; padding: 20px; text-align: left; border-radius: 8px; border-color: var(--color-green); border-style: dashed; border-width: thin; margin-top: 30px; }
+		.colab span { color: var(--color-text); line-height: 30px; font-family: var(--font-body); font-size: 0.9rem;}
+		.colab span.bold { font-weight: 700; }
 
         .rsvp-btn {
             background-color: var(--color-bg);
@@ -145,34 +150,34 @@
 			flex: 30%;
 			margin: 0;
 			background-color: var(--color-green);
-            background-image: url('confirma tu asistencia.jpg');
+            background-image: url('img/home/confirma_tu_asistencia.jpg');
             background-size: cover;
             background-position: center;
         }
 
         .stay-section { 
             max-width: 1200px; 
-            margin: 40px auto; 
+            margin: 0 auto; 
             padding: 40px; 
-            background-color: #ffffff; 
+            background-color: var(--color-green); 
+			color: var(--color-white);
         }
 
         .stay-content { 
             display: flex; 
             gap: 40px; 
-            align-items: center; 
+            align-items: start; 
             margin-top: 10px;
         }
 
-        .stay-image { flex: 1; }
+        .stay-image { flex: 1;}
         .stay-image img { width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
         
-        .stay-text { flex: 1; text-align: left; }
-        .stay-text .cursive-title { margin-bottom: 20px; color: #333; }
-        .stay-text p { margin-bottom: 15px; font-size: 0.9rem; }
-        .stay-text .stay-extra { font-size: 0.85rem; border-top: 1px solid #eee; pt: 15px; margin-top: 10px; padding-top: 15px;}
+        .stay-text { flex: 1; text-align: left; display: flex; flex-direction: column; justify-content: start;}
+		
+		.stay-extra { flex: 1; text-align: left; display: flex; flex-direction: column; justify-content: start; margin-top: 30px; padding-top: 30px; border-top: 1px dashed white; }
 
-        .gallery-section { padding: 40px; text-align: center; background-color: #ffffff; max-width: 1200px; margin: 20px auto; }
+        .gallery-section { padding: 40px; text-align: center; background-color: #ffffff; max-width: 1200px; margin: 0 auto; }
         
         .tabs-container {
             max-width: 1200px;
@@ -275,12 +280,13 @@
         }
 
         footer {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('footer.jpg');
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/footer.jpg');
             background-size: cover;
             background-position: center;
             color: white;
             text-align: center;
             padding: 40px;
+			margin-top: 40px;
         }
 
         .countdown-wrapper {
@@ -338,21 +344,26 @@
         }
 
         @media (max-width: 768px) {
-            header { background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('header_mobile.jpg'); justify-content: space-between; padding: 10px; margin-bottom: 20px; }
+            header { background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('img/home/header_mobile.jpg'); justify-content: space-between; padding: 10px; }
             .display-title { font-size: 4rem; }
-            .cb-item { flex: 0 0 calc(100% - 40px); min-height: 300px; margin: 20px; } 
+			.checkerboard { padding: 0 20px; }
+            .cb-item { flex: 0 0 calc(100%); min-height: 300px; margin: 20px 0 0 0; }
+			.cb-item:first-of-type, .cb-item:last-of-type { align-items: center; text-align: center; }
+			.cb-item:first-of-type, .cb-item:last-of-type { align-items: center; text-align: center; }
 			.checkerboard-limited { margin: 0 auto; }
             .checkerboard-limited .checkerboard:last-of-type { flex-direction: column-reverse; }
             header .details { flex-direction: column; gap: 5px; }
             header .details span.names { border-bottom: 1px solid #FFFFFF; border-top: 1px solid #FFFFFF; padding: 5px 0; border-left: 0px; border-right: 0px;}
 			
             .stay-content { flex-direction: column-reverse; text-align: center; gap: 30px; }
-            .stay-text { text-align: center; }
-            .stay-section { margin: 20px; padding: 20px; }
+            .stay-text, .stay-extra { text-align: center; }
+            .stay-section { margin: 20px 20px 0 20px; padding: 20px; }
             
-            .gallery-section { margin: 40px 20px; }
+            .gallery-section { margin: 20px; }
             .countdown-wrapper { flex-direction: column; gap: 25px; }
             .count-text { font-size: 1.8rem; }
+			
+			footer { margin-top: 0; }
         }
 
         @media (max-width: 600px) {
@@ -377,8 +388,17 @@
         <section class="checkerboard">
             <div class="cb-item cb-text">
                 <h2 class="cursive-title" data-translate="cocktail_title"></h2>
-                <p data-translate="cocktail_body"></p>
-                <a href="museo de la ciudad.jpg" target="_blank" class="btn-link" data-translate="map_btn"></a>
+				<span class="subtitle" data-translate="cocktail_subtitle_1"></span>
+				<span class="text" data-translate="cocktail_body_1"></span>
+				<span class="subtitle" data-translate="cocktail_subtitle_2"></span>
+				<span class="text" data-translate="cocktail_body_2_1"></span>
+				<span class="text" data-translate="cocktail_body_2_2"></span>
+				<span class="subtitle" data-translate="cocktail_subtitle_3"></span>
+				<span class="text" data-translate="cocktail_body_3_1"></span>
+				<span class="text" data-translate="cocktail_body_3_2"></span>
+				<span class="subtitle" data-translate="cocktail_subtitle_4"></span>
+				<span class="text" data-translate="cocktail_body_4"></span>
+                <a href="#" target="_blank" class="btn-link" data-translate="map_btn"></a>
             </div>
             <div class="cb-item cb-image img-2"></div>
         </section>
@@ -387,58 +407,66 @@
             <div class="cb-item cb-image img-1"></div>
             <div class="cb-item cb-text">
                 <h2 class="cursive-title" data-translate="wedding_title"></h2>
-                <p data-translate="wedding_body"></p>
-                <a href="Finca Nápoles1.jpg" target="_blank" class="btn-link" data-translate="map_btn"></a>
+				<span class="subtitle" data-translate="wedding_subtitle_1"></span>
+				<span class="text" data-translate="wedding_body_1"></span>
+				<span class="subtitle" data-translate="wedding_subtitle_2"></span>
+				<span class="text" data-translate="wedding_body_2_1"></span>
+				<span class="text" data-translate="wedding_body_2_2"></span>
+				<span class="subtitle" data-translate="wedding_subtitle_3"></span>
+				<span class="text" data-translate="wedding_body_3_1"></span>
+				<span class="text" data-translate="wedding_body_3_2"></span>
+				<span class="subtitle" data-translate="wedding_subtitle_4"></span>
+				<span class="text" data-translate="wedding_body_4"></span>
+                <a href="#" target="_blank" class="btn-link" data-translate="map_btn"></a>
             </div>
         </section>
     </div>
-
-    <section class="checkerboard">
-        <div class="cb-item green-section">
-            <div>
-                <h2 class="cursive-title" data-translate="events_tag"></h2>
-            </div>
-            <p data-translate="rsvp_text1"></p>
-			<br>
-            <p data-translate="rsvp_text2"></p>
-            <button class="rsvp-btn">RSVP</button>
-        </div>
-        <div class="cb-item cb-image couple-img"></div>
-		<div class="cb-item green-section">
-            <div>
-                <h2 class="cursive-title" data-translate="colaboracion_tag"></h2>
-            </div>
-            <p data-translate="colab_text1"></p>
-			<br>
-			<p data-translate="colab_text2"></p>
-			<br>
-			<div class="colab">			
-				<span class="bold" data-translate="colab_pre_nombre"></span><span data-translate="colab_nombre"></span>
-				<br>
-				<span class="bold" data-translate="colab_pre_cuenta"></span><span data-translate="colab_cuenta"></span>
-			</div>
-        </div>
-    </section>
-
-    <section class="stay-section">
+	
+	<section class="stay-section">
         <div class="stay-content">
             <div class="stay-image">
-                <img src="hampton by hilton quito la carolina.jpg" alt="Hampton by Hilton Quito">
+                <img src="img/home/hampton_by_hilton_quito_la_carolina.jpg" alt="Hampton by Hilton Quito">
             </div>
-            <div class="stay-text">
+            <div class="stay-text cb-text">
                 <h2 class="cursive-title" data-translate="stay_title"></h2>
-                <p data-translate="stay_p1"></p>
-                <p data-translate="stay_p2"></p>
-                <a href="hampton by hilton quito la carolina.jpg" target="_blank" class="btn-link" data-translate="stay_link"></a>
+                <span class="text" data-translate="stay_p1"></span>
+                <span class="text" data-translate="stay_p2"></span>
+                <a href="#" target="_blank" class="btn-link" data-translate="stay_link"></a>
                 
                 <div class="stay-extra">
-                    <p data-translate="stay_extra_text"></p>
-                    <a href="#quito" class="btn-link" style="font-size: 0.65rem;" data-translate="stay_extra_link"></a>
+                    <span class="text" data-translate="stay_extra_text"></span>
+                    <a href="#" target="_blank" class="btn-link" data-translate="stay_extra_link"></a>
                 </div>
             </div>
         </div>
     </section>
+	
+	<div class="checkerboard-limited">
+        <section class="checkerboard">
+            <div class="cb-item cb-text cb-confirm">
+                <h2 class="cursive-title" data-translate="rsvp_title"></h2>
+                <span class="text" data-translate="rsvp_text_1"></span>
+                <span class="text" data-translate="rsvp_text_2"></span>
+                <span class="text" data-translate="rsvp_text_3"></span>
+                <button class="tab-btn active">RSVP</button>
+            </div>
+            <div class="cb-item cb-image img-3"></div>
+        </section>
 
+        <section class="checkerboard">
+            <div class="cb-item cb-image img-4"></div>
+            <div class="cb-item cb-text cb-collab">
+                <h2 class="cursive-title" data-translate="colaboracion_title"></h2>
+                <span class="text" data-translate="colab_text1"></span>
+                <span class="text" data-translate="colab_text2"></span>
+                <div class="colab">			
+					<span class="bold" data-translate="colab_pre_nombre"></span><span data-translate="colab_nombre"></span>
+					<br>
+					<span class="bold" data-translate="colab_pre_cuenta"></span><span data-translate="colab_cuenta"></span>
+				</div>
+            </div>
+        </section>
+    </div>
 
     <section class="gallery-section">
         <h2 class="cursive-title" style="color: #333;" data-translate="gallery_title"></h2>
@@ -576,14 +604,33 @@
                 names: "Mario y Carolina",
                 date_hero: "11 de Julio \n 2026",
                 cocktail_title: "Cocktail de Bienvenida",
-                cocktail_body: "Jueves 9 de julio 2026, 20h (GMT-5)\n\nMuseo de la Ciudad\nGarcía Moreno, Quito 170405, Ecuador\n\nDress code: Semi Formal. [No White]\n\nServicio de autobuses:\nTBD",
+				cocktail_subtitle_1: "Fecha y hora",
+				cocktail_subtitle_2: "Lugar",
+				cocktail_subtitle_3: "Dress code",
+				cocktail_subtitle_4: "Servicio de autobuses",
+                cocktail_body_1: "Jueves 9 de julio 2026 | 20h",
+                cocktail_body_2_1: "Museo de la Ciudad",
+                cocktail_body_2_2: "García Moreno, Quito 170405, Ecuador",
+                cocktail_body_3_1: "Semi Formal",
+                cocktail_body_3_2: "No White",
+                cocktail_body_4: "Información disponible pronto",
                 map_btn: "Ver mapa y dirección",
                 wedding_title: "Ceremonia y Celebración",
-                wedding_body: "Sábado 11 de julio 2026, 12:30h (GMT-5)\n\nHacienda Nápoles\nVia A Napoles, Puembo 170179, Ecuador.\n\nDress code: Formal. [No White]\n\nServicio de autobuses:\nTBD",
-                events_tag: "Confirma tu Asistencia",
-                rsvp_text1: "Nos encantaría poder compartir contigo este día tan especial.",
-                rsvp_text2: "Puedes confirmar tu asistencia hasta el día 11 de junio de 2026.",
-				colaboracion_tag: "Colaboraciones",
+				wedding_subtitle_1: "Fecha y hora",
+				wedding_subtitle_2: "Lugar",
+				wedding_subtitle_3: "Dress code",
+				wedding_subtitle_4: "Servicio de autobuses",
+				wedding_body_1: "Sábado 11 de julio 2026 | 12:30h",
+                wedding_body_2_1: "Hacienda Nápoles",
+                wedding_body_2_2: "Via A Napoles, Puembo 170179, Ecuador",
+				wedding_body_3_1: "Formal",
+                wedding_body_3_2: "No White",
+                wedding_body_4: "Información disponible pronto",
+                rsvp_title: "Confirma tu Asistencia",
+                rsvp_text_1: "Nos encantaría poder compartir contigo este día tan especial para nosotros.",
+                rsvp_text_2: "Solo tienes que confirmar tu asistencia antes del 11 de junio de 2026 rellenando el siguiente formulario.",
+                rsvp_text_3: "¡Nos vemos muy pronto!",
+				colaboracion_title: "Colaboraciones",
 				colab_text1: "Estamos muy emocionados de que nos acompañes en este día, y agradecemos que hayas decidido celebrar este día tan importante junto a nosotros.",
 				colab_text2: "Por si quisieras dejarnos un detalle, ¡estaríamos muy agradecidos!",
 				colab_pre_nombre: "Nombre: ",
@@ -610,14 +657,33 @@
                 names: "Mario and Carolina",
                 date_hero: "July 11th \n 2026",
                 cocktail_title: "Welcome Cocktail",
-                cocktail_body: "Thursday July 9th 2026, 8pm (GMT-5)\n\nMuseo de la Ciudad\nGarcía Moreno, Quito 170405, Ecuador\n\nDress code: Semi Formal. [No White]\n\nShuttle service:\nTBD",
+				cocktail_subtitle_1: "Fecha y hora",
+				cocktail_subtitle_2: "Lugar",
+				cocktail_subtitle_3: "Dress code",
+				cocktail_subtitle_4: "Servicio de autobuses",
+                cocktail_body_1: "Jueves 9 de julio 2026 | 20h",
+                cocktail_body_2_1: "Museo de la Ciudad",
+                cocktail_body_2_2: "García Moreno, Quito 170405, Ecuador",
+                cocktail_body_3_1: "Semi Formal",
+                cocktail_body_3_2: "No White",
+                cocktail_body_4: "Información disponible pronto",
                 map_btn: "Get map & direction",
                 wedding_title: "Ceremony & Celebration",
-                wedding_body: "Saturday July 11th 2026, 12:30pm (GMT-5)\n\nHacienda Nápoles\nVia A Napoles, Puembo 170179, Ecuador.\n\nDress code: Formal. [No White]\n\nShuttle service:\nTBD",
-                events_tag: "RSVP",
-                rsvp_text1: "We would love for you to share this special day with us.",
-                rsvp_text2: "You can confirm your attendance until June 11th, 2026.",
-				colaboracion_tag: "Registry",
+				wedding_subtitle_1: "Fecha y hora",
+				wedding_subtitle_2: "Lugar",
+				wedding_subtitle_3: "Dress code",
+				wedding_subtitle_4: "Servicio de autobuses",
+				wedding_body_1: "Sábado 11 de julio 2026 | 12:30h",
+                wedding_body_2_1: "Hacienda Nápoles",
+                wedding_body_2_2: "Via A Napoles, Puembo 170179, Ecuador",
+				wedding_body_3_1: "Formal",
+                wedding_body_3_2: "No White",
+                wedding_body_4: "Información disponible pronto",
+                rsvp_title: "Confirm Your Attendance",
+                rsvp_text_1: "We would love to share this special day with you.",
+                rsvp_text_2: "Please confirm your attendance by June 11th, 2026, by filling out the form below.",
+                rsvp_text_3: "See you very soon!",
+				colaboracion_title: "Registry",
 				colab_text1: "We are very excited to have you join us and appreciate your decision to celebrate this important day with us.",
 				colab_text2: "If you'd like to leave us a gift, we would be very grateful!",
 				colab_pre_nombre: "Name: ",
