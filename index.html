@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-translate="pageTitle"></title>
     
-    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="icon" type="image/png" href="favicon.png">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Comfortaa:wght@300;400;700&family=Great+Vibes&display=swap" rel="stylesheet">
@@ -44,6 +44,7 @@
         }
 
         a:hover {
+			color: var(--color-green);
             transform: translateY(-2px);
             opacity: 0.8;
         }
@@ -96,19 +97,21 @@
 		.cb-item:first-of-type { align-items: end; text-align: right; }
 		.cb-item:last-of-type { align-items: start; text-align: left; }
 
-        .cb-image { background-size: cover; background-position: center; padding: 0; }
+        .cb-image { background-size: cover; background-position: center; padding: 0; margin: 20px; }
+		.confirm-section .cb-image { border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin: 0; }
         .img-1 { background-image: url('img/home/finca_napoles.jpg'); }
         .img-2 { background-image: url('img/home/museo_de_la_ciudad.jpg'); }
-		.img-3 { background-image: url('img/home/confirma_tu_asistencia.jpg'); }
+		.img-3 { background-image: url('img/home/hampton_by_hilton_quito_la_carolina.jpg'); }
 		.img-4 { background-image: url('img/home/colaboraciones.png'); }
+		.img-5 { background-image: url('img/home/confirma_tu_asistencia.jpg'); }
 
         .cb-text p { margin-bottom: 20px; font-size: 0.9rem; }
 		.cb-text .subtitle { color: var(--color-green); font-size: 0.9rem; font-weight: 700; }
 		.cb-text .subtitle:not(:first-child) { margin-top: 15px; }
 		.cb-text .text { font-size: 0.9rem; }
 		
-		.cb-confirm .text:not(:first-of-type), .cb-collab .text:not(:first-of-type), .stay-text .text:not(:first-of-type) { margin-top: 15px; }
-		.cb-confirm .tab-btn { margin-top: 30px; }
+		.cb-stay .text:not(:first-of-type), .cb-collab .text:not(:first-of-type), .confirm-text .text:not(:first-of-type) { margin-top: 15px; }
+		.cb-text .tab-btn { margin-top: 30px; background: var(--color-white); width: 175px; }
 
         .btn-link {
             color: var(--color-accent);
@@ -156,7 +159,7 @@
             background-position: center;
         }
 
-        .stay-section { 
+        .confirm-section {  
             max-width: 1200px; 
             margin: 0 auto; 
             padding: 40px; 
@@ -164,21 +167,17 @@
 			color: var(--color-white);
         }
 
-        .stay-content { 
+        .confirm-content { 
             display: flex; 
-            gap: 40px; 
+            gap: 100px; 
             align-items: start; 
-            margin-top: 10px;
         }
-
-        .stay-image { flex: 1;}
-        .stay-image img { width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
         
-        .stay-text { flex: 1; text-align: left; display: flex; flex-direction: column; justify-content: start;}
+        .confirm-text { flex: 1; text-align: left; display: flex; flex-direction: column; justify-content: start;} 
 		
-		.stay-extra { flex: 1; text-align: left; display: flex; flex-direction: column; justify-content: start; margin-top: 30px; padding-top: 30px; border-top: 1px dashed white; }
+		.stay-extra { flex: 1; text-align: right; display: flex; flex-direction: column; justify-content: start; margin-top: 30px; padding-top: 30px; border-top: 1px dashed var(--color-green); }
 
-        .gallery-section { padding: 40px; text-align: center; background-color: #ffffff; max-width: 1200px; margin: 0 auto; }
+        .gallery-section { padding: 40px; text-align: center; background-color: var(--color-white); max-width: 1200px; margin: 0 auto; }
         
         .tabs-container {
             max-width: 1200px;
@@ -210,14 +209,20 @@
 
         .tab-btn:hover {
             background-color: var(--color-green);
-            color: white;
+            color: var(--color-white);
             transform: scale(1.05);
         }
 
         .tab-btn.active {
             background-color: var(--color-green);
-            color: white;
+            color: var(--color-white);
         }
+		
+		.cb-text .tab-btn:hover {
+			background-color: var(--color-white);
+            color: var(--color-green);
+            transform: scale(1.05);
+		}
 
         .tab-content {
             display: none;
@@ -356,9 +361,9 @@
             header .details { flex-direction: column; gap: 5px; }
             header .details span.names { border-bottom: 1px solid #FFFFFF; border-top: 1px solid #FFFFFF; padding: 5px 0; border-left: 0px; border-right: 0px;}
 			
-            .stay-content { flex-direction: column-reverse; text-align: center; gap: 30px; }
-            .stay-text, .stay-extra { text-align: center; }
-            .stay-section { margin: 20px 20px 0 20px; padding: 20px; }
+            .confirm-content { align-items: stretch; flex-direction: column-reverse; text-align: center; margin-top: 0; gap: 20px; }
+            .confirm-text, .stay-extra { text-align: center; }
+            .confirm-section { margin: 20px 20px 0 20px; padding: 40px; }
             
             .gallery-section { margin: 20px; }
             .countdown-wrapper { flex-direction: column; gap: 25px; }
@@ -369,7 +374,7 @@
 
         @media (max-width: 600px) {
             .tab-content { grid-template-columns: 1fr; }
-            .tab-btn { width: 100%; text-align: center; }
+            .tab-btn, .cb-text .tab-btn { width: 100%; text-align: center; }
             .rsvp-btn { width: 100%; } 
         }
     </style>
@@ -423,13 +428,23 @@
         </section>
     </div>
 	
-	<section class="stay-section">
-        <div class="stay-content">
-            <div class="stay-image">
-                <img src="img/home/hampton_by_hilton_quito_la_carolina.jpg" alt="Hampton by Hilton Quito">
+	<section class="confirm-section">
+        <div class="confirm-content">
+			<div class="cb-item cb-image img-5"></div>
+            <div class="confirm-text cb-text">
+				<h2 class="cursive-title" data-translate="rsvp_title"></h2>
+                <span class="text" data-translate="rsvp_text_1"></span>
+                <span class="text" data-translate="rsvp_text_2"></span>
+                <span class="text" data-translate="rsvp_text_3"></span>
+                <button class="tab-btn">RSVP</button>
             </div>
-            <div class="stay-text cb-text">
-                <h2 class="cursive-title" data-translate="stay_title"></h2>
+        </div>
+    </section>
+	
+	<div class="checkerboard-limited">
+        <section class="checkerboard">
+            <div class="cb-item cb-text cb-stay">
+				<h2 class="cursive-title" data-translate="stay_title"></h2>
                 <span class="text" data-translate="stay_p1"></span>
                 <span class="text" data-translate="stay_p2"></span>
                 <a href="#" target="_blank" class="btn-link" data-translate="stay_link"></a>
@@ -438,18 +453,6 @@
                     <span class="text" data-translate="stay_extra_text"></span>
                     <a href="#" target="_blank" class="btn-link" data-translate="stay_extra_link"></a>
                 </div>
-            </div>
-        </div>
-    </section>
-	
-	<div class="checkerboard-limited">
-        <section class="checkerboard">
-            <div class="cb-item cb-text cb-confirm">
-                <h2 class="cursive-title" data-translate="rsvp_title"></h2>
-                <span class="text" data-translate="rsvp_text_1"></span>
-                <span class="text" data-translate="rsvp_text_2"></span>
-                <span class="text" data-translate="rsvp_text_3"></span>
-                <button class="tab-btn active">RSVP</button>
             </div>
             <div class="cb-item cb-image img-3"></div>
         </section>
