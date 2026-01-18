@@ -102,7 +102,7 @@
         .img-1 { background-image: url('img/home/finca_napoles.jpg'); }
         .img-2 { background-image: url('img/home/museo_de_la_ciudad.jpg'); }
 		.img-3 { background-image: url('img/home/hampton_by_hilton_quito_la_carolina.jpg'); }
-		.img-4 { background-image: url('img/home/colaboraciones.png'); }
+		.img-4 { background-image: url('img/home/colaboraciones.jpg'); }
 		.img-5 { background-image: url('img/home/confirma_tu_asistencia.jpg'); }
 
         .cb-text p { margin-bottom: 20px; font-size: 0.9rem; }
@@ -369,8 +369,7 @@
             .countdown-wrapper { flex-direction: column; gap: 25px; }
             .count-text { font-size: 1.8rem; }
 			
-			footer { margin-top: 0; }
-        }
+			footer { margin-top: 0; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/footer_mobile.jpg'); }
 
         @media (max-width: 600px) {
             .tab-content { grid-template-columns: 1fr; }
@@ -477,85 +476,69 @@
         
         <div class="tabs-container">
             <div class="tabs-menu">
-                <button class="tab-btn active" onclick="openTab(event, 'quito')">Quito</button>
-                <button class="tab-btn" onclick="openTab(event, 'andes')">Los Andes</button>
-                <button class="tab-btn" onclick="openTab(event, 'costa')">La Costa</button>
-                <button class="tab-btn" onclick="openTab(event, 'galapagos')">Galápagos</button>
+                <button class="tab-btn active" onclick="openTab(event, 'sierra')">Sierra</button>
+                <button class="tab-btn" onclick="openTab(event, 'amazonia')">Amazonía</button>
+                <button class="tab-btn" onclick="openTab(event, 'costa')">Costa</button>
+                <button class="tab-btn" onclick="openTab(event, 'galapagos')">Islas Galápagos</button>
             </div>
 
-            <div id="quito" class="tab-content active">
+            <div id="sierra" class="tab-content active">
                 <a href="#" class="mosaik-card">
-                    <img src="https://picsum.photos/600/800?random=11" alt="Centro Histórico">
-                    <div class="card-overlay"><h4>Centro Histórico</h4></div>
+                    <img src="img/quito_tab.jpg" alt="Quito">
+                    <div class="card-overlay"><h4>Quito</h4></div>
                 </a>
                 <a href="#" class="mosaik-card">
-                    <img src="https://picsum.photos/600/800?random=12" alt="La Mitad del Mundo">
-                    <div class="card-overlay"><h4>Mitad del Mundo</h4></div>
+                    <img src="img/cuenca_tab.jpg" alt="Cuenca">
+                    <div class="card-overlay"><h4>Cuenca</h4></div>
                 </a>
                 <a href="#" class="mosaik-card">
-                    <img src="https://picsum.photos/600/800?random=13" alt="Teleférico">
-                    <div class="card-overlay"><h4>Teleférico</h4></div>
-                </a>
-                <a href="#" class="mosaik-card">
-                    <img src="https://picsum.photos/600/800?random=14" alt="Guápulo">
-                    <div class="card-overlay"><h4>Guápulo</h4></div>
-                </a>
-            </div>
-
-            <div id="andes" class="tab-content">
-                <a href="#" class="mosaik-card">
-                    <img src="https://picsum.photos/600/800?random=21" alt="Cotopaxi">
-                    <div class="card-overlay"><h4>Volcán Cotopaxi</h4></div>
-                </a>
-                <a href="#" class="mosaik-card">
-                    <img src="https://picsum.photos/600/800?random=22" alt="Quilotoa">
-                    <div class="card-overlay"><h4>Laguna Quilotoa</h4></div>
-                </a>
-                <a href="#" class="mosaik-card">
-                    <img src="https://picsum.photos/600/800?random=23" alt="Baños">
+                    <img src="img/baños_tab.jpg" alt="Baños">
                     <div class="card-overlay"><h4>Baños</h4></div>
                 </a>
                 <a href="#" class="mosaik-card">
-                    <img src="https://picsum.photos/600/800?random=24" alt="Otavalo">
-                    <div class="card-overlay"><h4>Otavalo</h4></div>
+                    <img src="img/mindo_tab.jpg" alt="Mindo">
+                    <div class="card-overlay"><h4>Mindo</h4></div>
+                </a>
+            </div>
+
+            <div id="amazonia" class="tab-content">
+                <a href="#" class="mosaik-card">
+                    <img src="img/tena_tab.jpg" alt="Tena">
+                    <div class="card-overlay"><h4>Tena</h4></div>
+                </a>
+                <a href="#" class="mosaik-card">
+                    <img src="img/la_casa_del_suizo_tab.jpg" alt="La Casa del Suizo">
+                    <div class="card-overlay"><h4>La Casa del Suizo</h4></div>
+                </a>
+                <a href="#" class="mosaik-card">
+                    <img src="img/cuyabeno_tab.jpg" alt="Cuyabeno">
+                    <div class="card-overlay"><h4>Cuyabeno</h4></div>
                 </a>
             </div>
 
             <div id="costa" class="tab-content">
                 <a href="#" class="mosaik-card">
-                    <img src="https://picsum.photos/600/800?random=31" alt="Guayaquil">
+                    <img src="img/guayaquil_tab.jpg" alt="Guayaquil">
                     <div class="card-overlay"><h4>Guayaquil</h4></div>
                 </a>
                 <a href="#" class="mosaik-card">
-                    <img src="https://picsum.photos/600/800?random=32" alt="Ayangue">
-                    <div class="card-overlay"><h4>Ayangue</h4></div>
-                </a>
-                <a href="#" class="mosaik-card">
-                    <img src="https://picsum.photos/600/800?random=33" alt="Montañita">
-                    <div class="card-overlay"><h4>Montañita</h4></div>
-                </a>
-                <a href="#" class="mosaik-card">
-                    <img src="https://picsum.photos/600/800?random=34" alt="Manta">
+                    <img src="img/manta_tab.jpg" alt="Manta">
                     <div class="card-overlay"><h4>Manta</h4></div>
+                </a>
+                <a href="#" class="mosaik-card">
+                    <img src="img/montanita_tab.jpg" alt="Montañita">
+                    <div class="card-overlay"><h4>Montañita</h4></div>
                 </a>
             </div>
 
             <div id="galapagos" class="tab-content">
                 <a href="#" class="mosaik-card">
-                    <img src="https://picsum.photos/600/800?random=41" alt="Santa Cruz">
-                    <div class="card-overlay"><h4>Isla Santa Cruz</h4></div>
+                    <img src="img/santa_cruz_tab.jpg" alt="Santa Cruz">
+                    <div class="card-overlay"><h4>Santa Cruz</h4></div>
                 </a>
                 <a href="#" class="mosaik-card">
-                    <img src="https://picsum.photos/600/800?random=42" alt="Isabela">
-                    <div class="card-overlay"><h4>Isla Isabela</h4></div>
-                </a>
-                <a href="#" class="mosaik-card">
-                    <img src="https://picsum.photos/600/800?random=43" alt="San Cristobal">
+                    <img src="img/san_cristobal_tab.jpg" alt="San Cristobal">
                     <div class="card-overlay"><h4>San Cristóbal</h4></div>
-                </a>
-                <a href="#" class="mosaik-card">
-                    <img src="https://picsum.photos/600/800?random=44" alt="Bartolome">
-                    <div class="card-overlay"><h4>Isla Bartolomé</h4></div>
                 </a>
             </div>
         </div>
