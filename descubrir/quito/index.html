@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-translate="pageTitle"></title>
     
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="../../favicon.png">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Comfortaa:wght@300;400;700&family=Great+Vibes&display=swap" rel="stylesheet">
@@ -15,7 +15,6 @@
             --font-display: 'Amatic SC', cursive;
             --font-cursive: 'Great Vibes', cursive;
             --font-body: 'Comfortaa', cursive;
-            --font-trips: 'Cabin Sketch', cursive;
             --color-bg: #fff9f5;
             --color-green: #5C6E52;
             --color-text: #333333;
@@ -35,7 +34,7 @@
         }
 
         h1, h2, h3 { font-weight: 400; }
-        .cursive-title { font-family: var(--font-cursive); font-size: 3rem; margin-bottom: 1rem; line-height: 60px;}
+        .cursive-title { font-family: var(--font-display); font-size: 3rem; margin-bottom: 1rem; line-height: 60px;}
         .display-title { font-family: var(--font-display); font-size: 7rem; letter-spacing: 2px; font-weight: 700; }
 		.trips-title { font-family: var(--font-display); font-size: 3rem; letter-spacing: 2px; font-weight: 700; }
 
@@ -52,34 +51,18 @@
         }
 
         header {
-            height: 650px;
-            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('img/home/header.jpg');
+            height: 500px;
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('../../img/quito/quito_header.jpg');
             background-size: cover;
-            background-position: center;
+            background-position: top;
             display: flex;
             flex-direction: column;
-            justify-content: end;
+            justify-content: center;
             align-items: center;
             color: var(--color-white);
             text-align: center;
             padding: 50px 20px;
-        }
-
-        header .names {
-            font-family: var(--font-cursive);
-            font-size: 2rem;
-            padding: 0 25px;
-            border-left: 2px solid white;
-            border-right: 2px solid white;
-        }
-
-        header .details {
-            font-family: var(--font-body);
-            font-size: 1rem;
-            letter-spacing: 1px;
-            display: flex;
-            gap: 25px;
-            align-items: center;
+			margin-bottom: 40px;
         }
 
         .checkerboard { display: flex; flex-wrap: wrap; }
@@ -101,19 +84,16 @@
 
         .cb-image { background-size: cover; background-position: center; padding: 0; margin: 20px; }
 		.confirm-section .cb-image { border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin: 0; }
-        .img-1 { background-image: url('img/home/finca_napoles.jpg'); }
-        .img-2 { background-image: url('img/home/museo_de_la_ciudad.jpg'); }
-		.img-3 { background-image: url('img/home/hampton_by_hilton_quito_la_carolina.jpg'); }
-		.img-4 { background-image: url('img/home/colaboraciones.jpg'); }
-		.img-5 { background-image: url('img/home/confirma_tu_asistencia.jpg'); }
+        .img-1 { background-image: url('../../img/quito/quito_1.jpg'); }
+        .img-2 { background-image: url('../../img/quito/quito_2.jpg'); }
+		.img-3 { background-image: url('../../img/quito/quito_3.jpg'); }
 
         .cb-text p { margin-bottom: 20px; font-size: 0.9rem; }
 		.cb-text .subtitle { color: var(--color-green); font-size: 0.9rem; font-weight: 700; }
 		.cb-text .subtitle:not(:first-child) { margin-top: 15px; }
-		.cb-text .text { font-size: 0.9rem; }
+		.cb-text .text, .introduction-section .text { font-size: 0.9rem; }
 		
-		.cb-stay .text:not(:first-of-type), .cb-collab .text:not(:first-of-type), .confirm-text .text:not(:first-of-type) { margin-top: 15px; }
-		.cb-text .tab-btn { margin-top: 30px; background: var(--color-white); width: 175px; }
+		.introduction-section .text:not(:first-of-type), .cb-text .text:not(:first-of-type) { margin-top: 30px; }
 
         .btn-link {
             color: var(--color-accent);
@@ -180,6 +160,8 @@
 		.stay-extra { flex: 1; text-align: right; display: flex; flex-direction: column; justify-content: start; margin-top: 30px; padding-top: 30px; border-top: 1px dashed var(--color-green); }
 
         .gallery-section { padding: 40px; text-align: center; background-color: var(--color-white); max-width: 1200px; margin: 0 auto; }
+		.introduction-section { padding: 40px; text-align: center; background-color: var(--color-white); max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; justify-content: start; }
+		
         
         .tabs-container {
             max-width: 1200px;
@@ -192,6 +174,12 @@
             gap: 15px;
             margin-bottom: 40px;
             flex-wrap: wrap;
+        }
+		
+		.tabs-menu-bottom {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
         }
 
         .tab-btn {
@@ -228,7 +216,7 @@
 
         .tab-content {
             display: none;
-			flex-direction: row;
+            flex-direction: row;
 			justify-content: center;
             gap: 20px;
             animation: fadeIn 0.5s ease;
@@ -289,7 +277,7 @@
         }
 
         footer {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/footer.jpg');
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../../img/footer.jpg');
             background-size: cover;
             background-position: center;
             color: white;
@@ -349,14 +337,15 @@
         }
 
         @media (max-width: 768px) {
-            header { background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('img/home/header_mobile.jpg'); justify-content: space-between; padding: 10px; }
+            header { background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('../../img/quito/quito_header_mobile.jpg'); justify-content: center; margin-bottom: 20px; }
             .display-title { font-size: 4rem; }
 			.checkerboard { padding: 0 20px; }
+			.introduction-section { margin: 0 20px; }
             .cb-item { flex: 0 0 calc(100%); min-height: 300px; margin: 20px 0 0 0; }
 			.cb-item:first-of-type, .cb-item:last-of-type { align-items: center; text-align: center; }
 			.cb-item:first-of-type, .cb-item:last-of-type { align-items: center; text-align: center; }
 			.checkerboard-limited { margin: 0 auto; }
-            .checkerboard-limited .checkerboard:last-of-type { flex-direction: column-reverse; }
+            .checkerboard-limited .checkerboard:first-of-type, .checkerboard-limited .checkerboard:last-of-type { flex-direction: column-reverse; }
             header .details { flex-direction: column; gap: 5px; }
             header .details span.names { border-bottom: 1px solid #FFFFFF; border-top: 1px solid #FFFFFF; padding: 5px 0; border-left: 0px; border-right: 0px;}
 			
@@ -368,7 +357,7 @@
             .countdown-wrapper { flex-direction: column; gap: 25px; }
             .count-text { font-size: 1.8rem; }
 			
-			footer { margin-top: 0; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/footer_mobile.jpg'); }
+			footer { margin-top: 0; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../../img/footer_mobile.jpg'); }
 
         @media (max-width: 600px) {
             .tab-content { flex-direction: column; }
@@ -380,29 +369,23 @@
 <body>
 
     <header>
-        <h1 class="display-title">Save the Date</h1>
-        <div class="details">
-            <span data-translate="location"></span>
-            <span class="names" data-translate="names"></span>
-            <span data-translate="date_hero"></span>
-        </div>
+        <h1 class="display-title">Quito</h1>
     </header>
+	
+	<section class="introduction-section">
+		<span class="text" data-translate="introduction_body_1"></span>
+		<span class="text" data-translate="introduction_body_2"></span>
+		<span class="text" data-translate="introduction_body_3"></span>
+    </section>
 	
     <div class="checkerboard-limited">
         <section class="checkerboard">
             <div class="cb-item cb-text">
-                <h2 class="cursive-title" data-translate="cocktail_title"></h2>
-				<span class="subtitle" data-translate="cocktail_subtitle_1"></span>
-				<span class="text" data-translate="cocktail_body_1"></span>
-				<span class="subtitle" data-translate="cocktail_subtitle_2"></span>
-				<span class="text" data-translate="cocktail_body_2_1"></span>
-				<span class="text" data-translate="cocktail_body_2_2"></span>
-				<span class="subtitle" data-translate="cocktail_subtitle_3"></span>
-				<span class="text" data-translate="cocktail_body_3_1"></span>
-				<span class="text" data-translate="cocktail_body_3_2"></span>
-				<span class="subtitle" data-translate="cocktail_subtitle_4"></span>
-				<span class="text" data-translate="cocktail_body_4"></span>
-                <a href="#" target="_blank" class="btn-link" data-translate="map_btn"></a>
+                <h2 class="cursive-title" data-translate="como_llegar_title"></h2>
+				<span class="text" data-translate="como_llegar_body_1"></span>
+				<span class="text" data-translate="como_llegar_body_2"></span>
+				<span class="text" data-translate="como_llegar_body_3"></span>
+				<span class="text" data-translate="como_llegar_body_4"></span>
             </div>
             <div class="cb-item cb-image img-2"></div>
         </section>
@@ -410,66 +393,26 @@
         <section class="checkerboard">
             <div class="cb-item cb-image img-1"></div>
             <div class="cb-item cb-text">
-                <h2 class="cursive-title" data-translate="wedding_title"></h2>
-				<span class="subtitle" data-translate="wedding_subtitle_1"></span>
-				<span class="text" data-translate="wedding_body_1"></span>
-				<span class="subtitle" data-translate="wedding_subtitle_2"></span>
-				<span class="text" data-translate="wedding_body_2_1"></span>
-				<span class="text" data-translate="wedding_body_2_2"></span>
-				<span class="subtitle" data-translate="wedding_subtitle_3"></span>
-				<span class="text" data-translate="wedding_body_3_1"></span>
-				<span class="text" data-translate="wedding_body_3_2"></span>
-				<span class="subtitle" data-translate="wedding_subtitle_4"></span>
-				<span class="text" data-translate="wedding_body_4"></span>
-                <a href="#" target="_blank" class="btn-link" data-translate="map_btn"></a>
+                <h2 class="cursive-title" data-translate="visitar_title"></h2>
+				<span class="text" data-translate="visitar_body_1"></span>
+				<span class="text" data-translate="visitar_body_2"></span>
+				<span class="text" data-translate="visitar_body_3"></span>
+				<span class="text" data-translate="visitar_body_4"></span>
             </div>
         </section>
-    </div>
-	
-	<section class="confirm-section">
-        <div class="confirm-content">
-			<div class="cb-item cb-image img-5"></div>
-            <div class="confirm-text cb-text">
-				<h2 class="cursive-title" data-translate="rsvp_title"></h2>
-                <span class="text" data-translate="rsvp_text_1"></span>
-                <span class="text" data-translate="rsvp_text_2"></span>
-                <span class="text" data-translate="rsvp_text_3"></span>
-                <button class="tab-btn">RSVP</button>
-            </div>
-        </div>
-    </section>
-	
-	<div class="checkerboard-limited">
-        <section class="checkerboard">
-            <div class="cb-item cb-text cb-stay">
-				<h2 class="cursive-title" data-translate="stay_title"></h2>
-                <span class="text" data-translate="stay_p1"></span>
-                <span class="text" data-translate="stay_p2"></span>
-                <a href="#" target="_blank" class="btn-link" data-translate="stay_link"></a>
-                
-                <div class="stay-extra">
-                    <span class="text" data-translate="stay_extra_text"></span>
-                    <a href="descubrir/quito/index.html" class="btn-link" data-translate="stay_extra_link"></a>
-                </div>
+		
+		<section class="checkerboard">
+            <div class="cb-item cb-text">
+                <h2 class="cursive-title" data-translate="alojamiento_title"></h2>
+				<span class="text" data-translate="alojamiento_body_1"></span>
+				<span class="text" data-translate="alojamiento_body_2"></span>
+				<span class="text" data-translate="alojamiento_body_3"></span>
+				<span class="text" data-translate="alojamiento_body_4"></span>
             </div>
             <div class="cb-item cb-image img-3"></div>
         </section>
-
-        <section class="checkerboard">
-            <div class="cb-item cb-image img-4"></div>
-            <div class="cb-item cb-text cb-collab">
-                <h2 class="cursive-title" data-translate="colaboracion_title"></h2>
-                <span class="text" data-translate="colab_text1"></span>
-                <span class="text" data-translate="colab_text2"></span>
-                <div class="colab">			
-					<span class="bold" data-translate="colab_pre_nombre"></span><span data-translate="colab_nombre"></span>
-					<br>
-					<span class="bold" data-translate="colab_pre_cuenta"></span><span data-translate="colab_cuenta"></span>
-				</div>
-            </div>
-        </section>
     </div>
-
+	
     <section class="gallery-section">
         <h2 class="trips-title" style="color: #333;" data-translate="gallery_title"></h2>
         
@@ -482,63 +425,63 @@
             </div>
 
             <div id="sierra" class="tab-content active">
-                <a href="descubrir/quito/index.html" class="mosaik-card">
-                    <img src="img/quito_tab.jpg" alt="Quito">
-                    <div class="card-overlay"><h4>Quito</h4></div>
-                </a>
                 <a href="#" class="mosaik-card">
-                    <img src="img/cuenca_tab.jpg" alt="Cuenca">
+                    <img src="../../img/cuenca_tab.jpg" alt="Cuenca">
                     <div class="card-overlay"><h4>Cuenca</h4></div>
                 </a>
                 <a href="#" class="mosaik-card">
-                    <img src="img/baños_tab.jpg" alt="Baños">
+                    <img src="../../img/baños_tab.jpg" alt="Baños">
                     <div class="card-overlay"><h4>Baños</h4></div>
                 </a>
                 <a href="#" class="mosaik-card">
-                    <img src="img/mindo_tab.jpg" alt="Mindo">
+                    <img src="../../img/mindo_tab.jpg" alt="Mindo">
                     <div class="card-overlay"><h4>Mindo</h4></div>
                 </a>
             </div>
 
             <div id="amazonia" class="tab-content">
                 <a href="#" class="mosaik-card">
-                    <img src="img/tena_tab.jpg" alt="Tena">
+                    <img src="../../img/tena_tab.jpg" alt="Tena">
                     <div class="card-overlay"><h4>Tena</h4></div>
                 </a>
                 <a href="#" class="mosaik-card">
-                    <img src="img/la_casa_del_suizo_tab.jpg" alt="La Casa del Suizo">
+                    <img src="../../img/la_casa_del_suizo_tab.jpg" alt="La Casa del Suizo">
                     <div class="card-overlay"><h4>La Casa del Suizo</h4></div>
                 </a>
                 <a href="#" class="mosaik-card">
-                    <img src="img/cuyabeno_tab.jpg" alt="Cuyabeno">
+                    <img src="../../img/cuyabeno_tab.jpg" alt="Cuyabeno">
                     <div class="card-overlay"><h4>Cuyabeno</h4></div>
                 </a>
             </div>
 
             <div id="costa" class="tab-content">
                 <a href="#" class="mosaik-card">
-                    <img src="img/guayaquil_tab.jpg" alt="Guayaquil">
+                    <img src="../../img/guayaquil_tab.jpg" alt="Guayaquil">
                     <div class="card-overlay"><h4>Guayaquil</h4></div>
                 </a>
                 <a href="#" class="mosaik-card">
-                    <img src="img/manta_tab.jpg" alt="Manta">
+                    <img src="../../img/manta_tab.jpg" alt="Manta">
                     <div class="card-overlay"><h4>Manta</h4></div>
                 </a>
                 <a href="#" class="mosaik-card">
-                    <img src="img/montanita_tab.jpg" alt="Montañita">
+                    <img src="../../img/montanita_tab.jpg" alt="Montañita">
                     <div class="card-overlay"><h4>Montañita</h4></div>
                 </a>
             </div>
 
             <div id="galapagos" class="tab-content">
                 <a href="#" class="mosaik-card">
-                    <img src="img/santa_cruz_tab.jpg" alt="Santa Cruz">
+                    <img src="../../img/santa_cruz_tab.jpg" alt="Santa Cruz">
                     <div class="card-overlay"><h4>Santa Cruz</h4></div>
                 </a>
                 <a href="#" class="mosaik-card">
-                    <img src="img/san_cristobal_tab.jpg" alt="San Cristobal">
+                    <img src="../../img/san_cristobal_tab.jpg" alt="San Cristobal">
                     <div class="card-overlay"><h4>San Cristóbal</h4></div>
                 </a>
+            </div>
+			
+			<div class="tabs-menu-bottom">
+                <a href="../../index.html" class="tab-btn" data-translate="gallery_back"></a>
             </div>
         </div>
     </section>
@@ -586,51 +529,21 @@
 
         const translations = {
             es: {
-				pageTitle: "Boda Mario & Carolina",
-                location: "Quito \n Ecuador",
-                names: "Mario y Carolina",
-                date_hero: "11 de Julio \n 2026",
-                cocktail_title: "Cocktail de Bienvenida",
-				cocktail_subtitle_1: "Fecha y hora",
-				cocktail_subtitle_2: "Lugar",
-				cocktail_subtitle_3: "Dress code",
-				cocktail_subtitle_4: "Servicio de autobuses",
-                cocktail_body_1: "Jueves 9 de julio 2026 | 20h",
-                cocktail_body_2_1: "Museo de la Ciudad",
-                cocktail_body_2_2: "García Moreno, Quito 170405, Ecuador",
-                cocktail_body_3_1: "Semi Formal",
-                cocktail_body_3_2: "No White",
-                cocktail_body_4: "Información disponible pronto",
-                map_btn: "Ver mapa y dirección",
-                wedding_title: "Ceremonia y Celebración",
-				wedding_subtitle_1: "Fecha y hora",
-				wedding_subtitle_2: "Lugar",
-				wedding_subtitle_3: "Dress code",
-				wedding_subtitle_4: "Servicio de autobuses",
-				wedding_body_1: "Sábado 11 de julio 2026 | 12:30h",
-                wedding_body_2_1: "Hacienda Nápoles",
-                wedding_body_2_2: "Via A Napoles, Puembo 170179, Ecuador",
-				wedding_body_3_1: "Formal",
-                wedding_body_3_2: "No White",
-                wedding_body_4: "Información disponible pronto",
-                rsvp_title: "Confirma tu Asistencia",
-                rsvp_text_1: "Nos encantaría poder compartir contigo este día tan especial para nosotros.",
-                rsvp_text_2: "Solo tienes que confirmar tu asistencia antes del 11 de junio de 2026 rellenando el siguiente formulario.",
-                rsvp_text_3: "¡Nos vemos muy pronto!",
-				colaboracion_title: "Colaboraciones",
-				colab_text1: "Estamos muy emocionados de que nos acompañes en este día tan importante, y agradecemos que hayas decidido celebrarlo junto a nosotros.",
-				colab_text2: "Por si quisieras dejarnos un detalle, ¡estaríamos muy agradecidos!",
-				colab_pre_nombre: "Nombre: ",
-				colab_nombre: "Carolina Pallares",
-				colab_pre_cuenta: "Número de cuenta: ",
-				colab_cuenta: "TBD",
-                stay_title: "Estancia en Quito",
-                stay_p1: "Para vuestra comodidad, os recomendamos el hotel Hampton by Hilton Quito La Carolina, ubicado cerca de parques y restaurantes.",
-                stay_p2: "Hemos gestionado una tarifa preferencial para nuestros invitados. Podéis reservar directamente aquí:",
-                stay_link: "Reservar hotel aquí",
-                stay_extra_text: "También os recomendamos otras zonas increíbles para alojarse en la sección:",
-                stay_extra_link: "Ver recomendaciones en Quito",
+				pageTitle: "Boda Mario & Carolina | Visitar Quito",
+				introduction_body_1: "Quito, la joya de los Andes, te espera a 2.850 metros de altura con una mezcla mágica de historia colonial y naturaleza vibrante. Como la primera ciudad declarada Patrimonio de la Humanidad, su Centro Histórico es el mejor conservado de América, lleno de iglesias doradas y plazas que cuentan siglos de leyendas.",
+				introduction_body_2: "Más allá de sus calles empedradas, la ciudad es la puerta de entrada a aventuras únicas. Desde el espectacular Telefériqo que te lleva a las nubes, hasta la energía mística de la Mitad del Mundo, Quito ofrece experiencias que desafían la gravedad y conectan el alma con la cultura ecuatoriana.",
+				introduction_body_3: "Prepárate para una gastronomía que despierta los sentidos y una hospitalidad que te hará sentir en casa. Ya sea que busques arte, historia o un café con vista a los volcanes, Quito es el destino donde cada rincón tiene una historia que merece ser vivida.",
+				como_llegar_title: "¿CÓMO MOVERSE EN QUITO?",
+				como_llegar_body_1: "Moverse por la ciudad es sencillo gracias al Metro de Quito, la forma más rápida de cruzar la ciudad de norte a sur. Para una experiencia más local, los buses urbanos y el sistema de Trolebús conectan los puntos turísticos principales por un costo muy bajo.",
+				como_llegar_body_2: "Si prefieres comodidad privada, aplicaciones como Uber y Cabify funcionan perfectamente y son muy seguras. También puedes usar los taxis amarillos legales; solo asegúrate de que usen el taxímetro o acuerda el precio antes de subir para evitar sorpresas.",
+				visitar_title: "¿QUÉ VISITAR?",
+				visitar_body_1: "No puedes irte sin caminar por la Calle de La Ronda, donde el arte y la tradición cobran vida entre talleres de artesanos. La Iglesia de la Compañía de Jesús, con su interior recubierto de pan de oro, te dejará sin aliento por su belleza barroca única en el mundo.",
+				visitar_body_2: "Para los amantes de las vistas panorámicas, subir al Panecillo es obligatorio para ver a la Virgen alada custodiando la ciudad. Si buscas algo moderno, el barrio de La Mariscal ofrece una vibrante vida nocturna, museos de arte contemporáneo y la mejor oferta de café local.",
+				alojamiento_title: "¿DÓNDE ALOJARSE?",
+                alojamiento_body_1: "Si buscas romance e historia, el Centro Histórico cuenta con hoteles boutique en casas coloniales restauradas que te transportan al pasado. Es la zona ideal para estar a pocos pasos de los museos y las plazas más emblemáticas de la capital.",
+                alojamiento_body_2: "Para quienes prefieren estar cerca de los mejores restaurantes, centros comerciales y parques modernos, las zonas de La Carolina y La Floresta son las mejores opciones. Son barrios cosmopolitas, seguros y con una oferta gastronómica de primer nivel.",
                 gallery_title: "¿Qué visitar en Ecuador?",
+				gallery_back: "Volver",
                 footer_date: "11 . Julio . 2026",
                 footer_thanks: "¡Estamos muy emocionados de celebrar nuestro día con todos vosotros!",
                 count_pre: "Solo unas hora...",
@@ -640,51 +553,21 @@
                 mins_label: "Minutos"
             },
             en: {
-				pageTitle: "Mario & Carolina wedding",
-                location: "Quito \n Ecuador",
-                names: "Mario and Carolina",
-                date_hero: "July 11th \n 2026",
-                cocktail_title: "Welcome Cocktail",
-				cocktail_subtitle_1: "Fecha y hora",
-				cocktail_subtitle_2: "Lugar",
-				cocktail_subtitle_3: "Dress code",
-				cocktail_subtitle_4: "Servicio de autobuses",
-                cocktail_body_1: "Jueves 9 de julio 2026 | 20h",
-                cocktail_body_2_1: "Museo de la Ciudad",
-                cocktail_body_2_2: "García Moreno, Quito 170405, Ecuador",
-                cocktail_body_3_1: "Semi Formal",
-                cocktail_body_3_2: "No White",
-                cocktail_body_4: "Información disponible pronto",
-                map_btn: "Get map & direction",
-                wedding_title: "Ceremony & Celebration",
-				wedding_subtitle_1: "Fecha y hora",
-				wedding_subtitle_2: "Lugar",
-				wedding_subtitle_3: "Dress code",
-				wedding_subtitle_4: "Servicio de autobuses",
-				wedding_body_1: "Sábado 11 de julio 2026 | 12:30h",
-                wedding_body_2_1: "Hacienda Nápoles",
-                wedding_body_2_2: "Via A Napoles, Puembo 170179, Ecuador",
-				wedding_body_3_1: "Formal",
-                wedding_body_3_2: "No White",
-                wedding_body_4: "Información disponible pronto",
-                rsvp_title: "Confirm Your Attendance",
-                rsvp_text_1: "We would love to share this special day with you.",
-                rsvp_text_2: "Please confirm your attendance by June 11th, 2026, by filling out the form below.",
-                rsvp_text_3: "See you very soon!",
-				colaboracion_title: "Registry",
-				colab_text1: "We are very excited to have you join us and appreciate your decision to celebrate this important day with us.",
-				colab_text2: "If you'd like to leave us a gift, we would be very grateful!",
-				colab_pre_nombre: "Name: ",
-				colab_nombre: "Carolina Pallares",
-				colab_pre_cuenta: "Account Number: ",
-				colab_cuenta: "TBD",
-                stay_title: "Stay in Quito",
-                stay_p1: "For your convenience, we recommend the Hampton by Hilton Quito La Carolina hotel, located near parks and restaurants.",
-                stay_p2: "We have arranged a special rate for our guests. You can book directly here:",
-                stay_link: "Book hotel here",
-                stay_extra_text: "We also recommend other great areas to stay in the section:",
-                stay_extra_link: "See Quito recommendations",
+				pageTitle: "Wedding Mario & Carolina | Visit Quito",
+				introduction_body_1: "Quito, la joya de los Andes, te espera a 2.850 metros de altura con una mezcla mágica de historia colonial y naturaleza vibrante. Como la primera ciudad declarada Patrimonio de la Humanidad, su Centro Histórico es el mejor conservado de América, lleno de iglesias doradas y plazas que cuentan siglos de leyendas.",
+				introduction_body_2: "Más allá de sus calles empedradas, la ciudad es la puerta de entrada a aventuras únicas. Desde el espectacular Telefériqo que te lleva a las nubes, hasta la energía mística de la Mitad del Mundo, Quito ofrece experiencias que desafían la gravedad y conectan el alma con la cultura ecuatoriana.",
+				introduction_body_3: "Prepárate para una gastronomía que despierta los sentidos y una hospitalidad que te hará sentir en casa. Ya sea que busques arte, historia o un café con vista a los volcanes, Quito es el destino donde cada rincón tiene una historia que merece ser vivida.",
+				como_llegar_title: "¿CÓMO MOVERSE EN QUITO?",
+				como_llegar_body_1: "Moverse por la ciudad es sencillo gracias al Metro de Quito, la forma más rápida de cruzar la ciudad de norte a sur. Para una experiencia más local, los buses urbanos y el sistema de Trolebús conectan los puntos turísticos principales por un costo muy bajo.",
+				como_llegar_body_2: "Si prefieres comodidad privada, aplicaciones como Uber y Cabify funcionan perfectamente y son muy seguras. También puedes usar los taxis amarillos legales; solo asegúrate de que usen el taxímetro o acuerda el precio antes de subir para evitar sorpresas.",
+				visitar_title: "¿QUÉ VISITAR?",
+				visitar_body_1: "No puedes irte sin caminar por la Calle de La Ronda, donde el arte y la tradición cobran vida entre talleres de artesanos. La Iglesia de la Compañía de Jesús, con su interior recubierto de pan de oro, te dejará sin aliento por su belleza barroca única en el mundo.",
+				visitar_body_2: "Para los amantes de las vistas panorámicas, subir al Panecillo es obligatorio para ver a la Virgen alada custodiando la ciudad. Si buscas algo moderno, el barrio de La Mariscal ofrece una vibrante vida nocturna, museos de arte contemporáneo y la mejor oferta de café local.",
+				alojamiento_title: "¿DÓNDE ALOJARSE?",
+                alojamiento_body_1: "Si buscas romance e historia, el Centro Histórico cuenta con hoteles boutique en casas coloniales restauradas que te transportan al pasado. Es la zona ideal para estar a pocos pasos de los museos y las plazas más emblemáticas de la capital.",
+                alojamiento_body_2: "Para quienes prefieren estar cerca de los mejores restaurantes, centros comerciales y parques modernos, las zonas de La Carolina y La Floresta son las mejores opciones. Son barrios cosmopolitas, seguros y con una oferta gastronómica de primer nivel.",
                 gallery_title: "What to visit in Ecuador?",
+				gallery_back: "Back",
                 footer_date: "11 . July . 2026",
                 footer_thanks: "We are so excited to celebrate our day with all of you!",
                 count_pre: "Just some hours...",
