@@ -15,7 +15,6 @@
             --font-display: 'Amatic SC', cursive;
             --font-cursive: 'Great Vibes', cursive;
             --font-body: 'Comfortaa', cursive;
-            --font-trips: 'Cabin Sketch', cursive;
             --color-bg: #fff9f5;
             --color-green: #5C6E52;
             --color-text: #333333;
@@ -37,7 +36,6 @@
         h1, h2, h3 { font-weight: 400; }
         .cursive-title { font-family: var(--font-cursive); font-size: 3rem; margin-bottom: 1rem; line-height: 60px;}
         .display-title { font-family: var(--font-display); font-size: 7rem; letter-spacing: 2px; font-weight: 700; }
-		.trips-title { font-family: var(--font-display); font-size: 3rem; letter-spacing: 2px; font-weight: 700; }
 
         a {
             text-decoration: none;
@@ -471,7 +469,7 @@
     </div>
 
     <section class="gallery-section">
-        <h2 class="trips-title" style="color: #333;" data-translate="gallery_title"></h2>
+        <h2 class="cursive-title" style="color: #333;" data-translate="gallery_title"></h2>
         
         <div class="tabs-container">
             <div class="tabs-menu">
@@ -486,15 +484,15 @@
                     <img src="img/quito_tab.jpg" alt="Quito">
                     <div class="card-overlay"><h4>Quito</h4></div>
                 </a>
-                <a href="#" class="mosaik-card">
+                <a href="descubrir/cuenca/index.html" class="mosaik-card">
                     <img src="img/cuenca_tab.jpg" alt="Cuenca">
                     <div class="card-overlay"><h4>Cuenca</h4></div>
                 </a>
-                <a href="#" class="mosaik-card">
+                <a href="descubrir/banos/index.html" class="mosaik-card">
                     <img src="img/baños_tab.jpg" alt="Baños">
                     <div class="card-overlay"><h4>Baños</h4></div>
                 </a>
-                <a href="#" class="mosaik-card">
+                <a href="descubrir/mindo/index.html" class="mosaik-card">
                     <img src="img/mindo_tab.jpg" alt="Mindo">
                     <div class="card-overlay"><h4>Mindo</h4></div>
                 </a>
@@ -568,50 +566,34 @@
     </footer>
 
     <script>
-        function openTab(evt, tabName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tab-content");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-                tabcontent[i].classList.remove("active");
-            }
-            tablinks = document.getElementsByClassName("tab-btn");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            document.getElementById(tabName).style.display = "flex";
-            document.getElementById(tabName).classList.add("active");
-            evt.currentTarget.className += " active";
-        }
-
         const translations = {
             es: {
-				pageTitle: "Boda Mario & Carolina",
+				pageTitle: "Boda Carolina & Mario",
                 location: "Quito \n Ecuador",
-                names: "Mario y Carolina",
+                names: "Carolina y Mario",
                 date_hero: "11 de Julio \n 2026",
-                cocktail_title: "Cocktail de Bienvenida",
+                cocktail_title: "Cóctel de Bienvenida",
 				cocktail_subtitle_1: "Fecha y hora",
 				cocktail_subtitle_2: "Lugar",
-				cocktail_subtitle_3: "Dress code",
-				cocktail_subtitle_4: "Servicio de autobuses",
+				cocktail_subtitle_3: "Dress Code",
+				cocktail_subtitle_4: "Servicio de Autobuses",
                 cocktail_body_1: "Jueves 9 de julio 2026 | 20h",
                 cocktail_body_2_1: "Museo de la Ciudad",
                 cocktail_body_2_2: "García Moreno, Quito 170405, Ecuador",
                 cocktail_body_3_1: "Semi Formal",
-                cocktail_body_3_2: "No White",
+                cocktail_body_3_2: "Por favor, evitar el color blanco",
                 cocktail_body_4: "Información disponible pronto",
                 map_btn: "Ver mapa y dirección",
                 wedding_title: "Ceremonia y Celebración",
 				wedding_subtitle_1: "Fecha y hora",
 				wedding_subtitle_2: "Lugar",
-				wedding_subtitle_3: "Dress code",
-				wedding_subtitle_4: "Servicio de autobuses",
+				wedding_subtitle_3: "Dress Code",
+				wedding_subtitle_4: "Servicio de Autobuses",
 				wedding_body_1: "Sábado 11 de julio 2026 | 12:30h",
                 wedding_body_2_1: "Hacienda Nápoles",
                 wedding_body_2_2: "Via A Napoles, Puembo 170179, Ecuador",
 				wedding_body_3_1: "Formal",
-                wedding_body_3_2: "No White",
+                wedding_body_3_2: "Por favor, no usar blanco",
                 wedding_body_4: "Información disponible pronto",
                 rsvp_title: "Confirma tu Asistencia",
                 rsvp_text_1: "Nos encantaría poder compartir contigo este día tan especial para nosotros.",
@@ -633,101 +615,69 @@
                 gallery_title: "¿Qué visitar en Ecuador?",
                 footer_date: "11 . Julio . 2026",
                 footer_thanks: "¡Estamos muy emocionados de celebrar nuestro día con todos vosotros!",
-                count_pre: "Solo unas hora...",
+                count_pre: "Solo unas horas...",
                 count_post: "...¡para casarnos!",
                 days_label: "Días",
                 hours_label: "Horas",
                 mins_label: "Minutos"
             },
             en: {
-				pageTitle: "Mario & Carolina wedding",
+				pageTitle: "Carolina & Mario's Wedding",
                 location: "Quito \n Ecuador",
-                names: "Mario and Carolina",
+                names: "Carolina and Mario",
                 date_hero: "July 11th \n 2026",
                 cocktail_title: "Welcome Cocktail",
-				cocktail_subtitle_1: "Fecha y hora",
-				cocktail_subtitle_2: "Lugar",
-				cocktail_subtitle_3: "Dress code",
-				cocktail_subtitle_4: "Servicio de autobuses",
-                cocktail_body_1: "Jueves 9 de julio 2026 | 20h",
+				cocktail_subtitle_1: "Date and Time",
+				cocktail_subtitle_2: "Location",
+				cocktail_subtitle_3: "Dress Code",
+				cocktail_subtitle_4: "Shuttle Service",
+                cocktail_body_1: "Thursday, July 9th, 2026 | 8:00 PM",
                 cocktail_body_2_1: "Museo de la Ciudad",
                 cocktail_body_2_2: "García Moreno, Quito 170405, Ecuador",
                 cocktail_body_3_1: "Semi Formal",
-                cocktail_body_3_2: "No White",
-                cocktail_body_4: "Información disponible pronto",
-                map_btn: "Get map & direction",
-                wedding_title: "Ceremony & Celebration",
-				wedding_subtitle_1: "Fecha y hora",
-				wedding_subtitle_2: "Lugar",
-				wedding_subtitle_3: "Dress code",
-				wedding_subtitle_4: "Servicio de autobuses",
-				wedding_body_1: "Sábado 11 de julio 2026 | 12:30h",
+                cocktail_body_3_2: "Please avoid wearing white ",
+                cocktail_body_4: "More information coming soon",
+                map_btn: "Map and Directions",
+                wedding_title: "Ceremony and Reception",
+				wedding_subtitle_1: "Date and Time",
+				wedding_subtitle_2: "Location",
+				wedding_subtitle_3: "Dress Code",
+				wedding_subtitle_4: "Shuttle Service",
+				wedding_body_1: "Saturday, July 11th, 2026 | 12:30 PM",
                 wedding_body_2_1: "Hacienda Nápoles",
                 wedding_body_2_2: "Via A Napoles, Puembo 170179, Ecuador",
 				wedding_body_3_1: "Formal",
-                wedding_body_3_2: "No White",
-                wedding_body_4: "Información disponible pronto",
-                rsvp_title: "Confirm Your Attendance",
-                rsvp_text_1: "We would love to share this special day with you.",
-                rsvp_text_2: "Please confirm your attendance by June 11th, 2026, by filling out the form below.",
-                rsvp_text_3: "See you very soon!",
-				colaboracion_title: "Registry",
-				colab_text1: "We are very excited to have you join us and appreciate your decision to celebrate this important day with us.",
-				colab_text2: "If you'd like to leave us a gift, we would be very grateful!",
+                wedding_body_3_2: "Please avoid wearing white ",
+                wedding_body_4: "More information coming soon",
+                rsvp_title: "RSVP",
+                rsvp_text_1: "We would love for you to join us on our special day.",
+                rsvp_text_2: "Please let us know if you’ll be attending by June 11, 2026 by filling out the form below.",
+                rsvp_text_3: "See you soon!",
+				colaboracion_title: "Gifts",
+				colab_text1: "We are so excited to celebrate this important day with you and are truly grateful that you’ve chosen to be part of it.",
+				colab_text2: "Should you choose to give a gift, we would be truly grateful!",
 				colab_pre_nombre: "Name: ",
 				colab_nombre: "Carolina Pallares",
-				colab_pre_cuenta: "Account Number: ",
+				colab_pre_cuenta: "Bank account: ",
 				colab_cuenta: "TBD",
-                stay_title: "Stay in Quito",
-                stay_p1: "For your convenience, we recommend the Hampton by Hilton Quito La Carolina hotel, located near parks and restaurants.",
+                stay_title: "Staying in Quito",
+                stay_p1: "For your convenience, we recommend the Hampton by Hilton Quito La Carolina, located near parks and restaurants.",
                 stay_p2: "We have arranged a special rate for our guests. You can book directly here:",
                 stay_link: "Book hotel here",
-                stay_extra_text: "We also recommend other great areas to stay in the section:",
-                stay_extra_link: "See Quito recommendations",
+                stay_extra_text: "We also recommend other amazing areas to stay in Quito:",
+                stay_extra_link: "See recommendations in Quito",
                 gallery_title: "What to visit in Ecuador?",
                 footer_date: "11 . July . 2026",
                 footer_thanks: "We are so excited to celebrate our day with all of you!",
-                count_pre: "Just some hours...",
-                count_post: "...until we get married!",
+                count_pre: "Just a few hours...",
+                count_post: "...until we say 'I do'!",
                 days_label: "Days",
                 hours_label: "Hours",
-                mins_label: "Minutos"
+                mins_label: "Minutes"
             }
         };
-
-        function updateCountdown() {
-            const weddingDate = new Date("July 11, 2026 12:30:00").getTime();
-            const now = new Date().getTime();
-            const diff = weddingDate - now;
-
-            if (diff <= 0) {
-                document.querySelector(".countdown-wrapper").style.display = "none";
-                return;
-            }
-
-            const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-
-            document.getElementById("days").innerText = d.toString().padStart(2, '0');
-            document.getElementById("hours").innerText = h.toString().padStart(2, '0');
-            document.getElementById("minutes").innerText = m.toString().padStart(2, '0');
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const userLang = (navigator.language || navigator.userLanguage).startsWith('es') ? 'es' : 'en';
-            const langData = translations[userLang];
-
-            document.querySelectorAll('[data-translate]').forEach(el => {
-                const key = el.getAttribute('data-translate');
-                if (langData[key]) {
-                    el.innerText = langData[key];
-                }
-            });
-
-            updateCountdown();
-            setInterval(updateCountdown, 60000);
-        });
     </script>
+	
+	<script src="script.js"></script>
 </body>
 </html>
