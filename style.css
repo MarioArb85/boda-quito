@@ -41,7 +41,7 @@
             height: 500px;
             background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), var(--header-bg-desktop);
             background-size: cover;
-            background-position: top;
+			background-position: center;
             display: flex;
             flex-direction: column;
             justify-content: center;

@@ -14,19 +14,25 @@
 	
 	<style>
 		:root {
-			--header-bg-desktop: url('img/cuenca/cuenca_header.jpg');
-			--header-bg-mobile: url('img/cuenca/cuenca_header_mobile.jpg');
+			--header-bg-desktop: url('img/la_casa_del_suizo/la_casa_del_suizo_header.jpg');
+			--header-bg-mobile: url('img/la_casa_del_suizo/la_casa_del_suizo_header_mobile.jpg');
 
-			--img-1: url('img/cuenca/cuenca_1.jpg');
-			--img-2: url('img/cuenca/cuenca_2.jpg');
-			--img-3: url('img/cuenca/cuenca_3.jpg');
+			--img-1: url('img/la_casa_del_suizo/la_casa_del_suizo_1.jpg');
+			--img-2: url('img/la_casa_del_suizo/la_casa_del_suizo_2.jpg');
+			--img-3: url('img/la_casa_del_suizo/la_casa_del_suizo_3.jpg');
+		}
+		
+		@media (max-width: 768px) {
+			header {
+				background-position: center;
+			}
 		}
 	</style>
 </head>
 <body>
 
     <header>
-        <h1 class="display-title">Cuenca</h1>
+        <h1 class="display-title">La Casa del Suizo</h1>
     </header>
 	
 	<section class="introduction-section">
@@ -82,9 +88,13 @@
             </div>
 
             <div id="sierra" class="tab-content active">
-                <a href="../quito/index.html" class="mosaik-card">
+				<a href="../quito/index.html" class="mosaik-card">
                     <img src="../../img/quito_tab.jpg" alt="Quito">
                     <div class="card-overlay"><h4>Quito</h4></div>
+                </a>
+                <a href="../cuenca/index.html" class="mosaik-card">
+                    <img src="../../img/cuenca_tab.jpg" alt="Cuenca">
+                    <div class="card-overlay"><h4>Cuenca</h4></div>
                 </a>
                 <a href="../banos/index.html" class="mosaik-card">
                     <img src="../../img/baños_tab.jpg" alt="Baños">
@@ -100,10 +110,6 @@
                 <a href="../tena/index.html" class="mosaik-card">
                     <img src="../../img/tena_tab.jpg" alt="Tena">
                     <div class="card-overlay"><h4>Tena</h4></div>
-                </a>
-                <a href="../la_casa_del_suizo/index.html" class="mosaik-card">
-                    <img src="../../img/la_casa_del_suizo_tab.jpg" alt="La Casa del Suizo">
-                    <div class="card-overlay"><h4>La Casa del Suizo</h4></div>
                 </a>
                 <a href="../cuyabeno/index.html" class="mosaik-card">
                     <img src="../../img/cuyabeno_tab.jpg" alt="Cuyabeno">
@@ -131,7 +137,7 @@
                     <img src="../../img/santa_cruz_tab.jpg" alt="Santa Cruz">
                     <div class="card-overlay"><h4>Santa Cruz</h4></div>
                 </a>
-				<a href="../san_cristobal/index.html" class="mosaik-card">
+                <a href="../san_cristobal/index.html" class="mosaik-card">
                     <img src="../../img/san_cristobal_tab.jpg" alt="San Cristobal">
                     <div class="card-overlay"><h4>San Cristóbal</h4></div>
                 </a>
@@ -170,19 +176,19 @@
     <script>
         const translations = {
             es: {
-				pageTitle: "Boda Carolina & Mario | Visitar Cuenca",
-				introduction_body_1: "Cuenca es una ciudad que invita a quedarse. Tranquila, elegante y llena de encanto, se encuentra en el sur del Ecuador, rodeada de montañas y atravesada por ríos que forman parte de su identidad. Su Centro Histórico, declarado Patrimonio de la Humanidad, se distingue por su arquitectura bien conservada, sus calles empedradas y un ambiente que combina tradición y vida cotidiana de manera muy natural.",
-				introduction_body_2: "Caminar por Cuenca es disfrutar de sus plazas, iglesias y balcones floridos, pero también de su ritmo pausado y su espíritu cultural. Es una ciudad profundamente ligada al arte, la música y la artesanía, lo que se siente en cada rincón y en la calidez de su gente.",
-				introduction_body_3: "La gastronomía local, los cafés tradicionales y la hospitalidad cuencana hacen que la experiencia sea aún más especial. Y si te gusta la naturaleza, el Parque Nacional Cajas es un lugar que no puedes perderte: con sus lagunas, páramos y senderos rodeados de montañas, es perfecto para quienes buscan tranquilidad y paisajes impresionantes.",
-				como_llegar_title: "¿Cómo moverse en Cuenca?",
-				como_llegar_body_1: "Cuenca es una ciudad fácil de recorrer. Su tamaño permite desplazarse caminando por gran parte del Centro Histórico. Además, el sistema de tranvía conecta zonas importantes de la ciudad de forma cómoda y ordenada.",
-				como_llegar_body_2: "También hay taxis oficiales disponibles y aplicaciones de transporte que funcionan de manera segura. Para trayectos cortos, moverse en taxi suele ser práctico y accesible. Al igual que enQuito, es necesesario siempre tener efectuvio para pagar el taxi.",
+				pageTitle: "Boda Carolina & Mario | Visitar La Casa del Suizo",
+				introduction_body_1: "",
+				introduction_body_2: "",
+				introduction_body_3: "",
+				como_llegar_title: "¿Cómo moverse en La Casa del Suizo?",
+				como_llegar_body_1: "",
+				como_llegar_body_2: "",
 				visitar_title: "¿Qué visitar?",
-				visitar_body_1: "Una visita a la Catedral de la Inmaculada Concepción, conocida como la Catedral Nueva, es imprescindible. Sus cúpulas azules son uno de los símbolos de la ciudad y ofrecen una vista privilegiada desde lo alto.  Un paseo por el Barranco del río Tomebamba permite apreciar la ciudad desde otra perspectiva, con vistas encantadoras y casas tradicionales.",
-				visitar_body_2: "Como recomendación especial, visitar el Parque Nacional Cajas es imperdible. Sus lagunas, senderos y páramos ofrecen un contacto directo con la naturaleza y paisajes que parecen sacados de una postal. No puedes dejar de conocer también una fábrica tradicional de sombreros de paja toquilla, donde se aprende sobre uno de los productos más emblemáticos del país.",
+				visitar_body_1: "",
+				visitar_body_2: "",
 				alojamiento_title: "¿Dónde alojarse?",
-                alojamiento_body_1: "El Centro Histórico es la mejor opción para quienes desean estar cerca de los principales atractivos culturales y disfrutar del encanto colonial de la ciudad. En esta zona se encuentran hoteles boutique y casas restauradas con un ambiente acogedor y elegante. No te olvides de reservar en el restaurante Tiesto's.",
-                alojamiento_body_2: "Para quienes prefieren áreas más tranquilas o residenciales, los alrededores del río Tomebamba ofrecen opciones cómodas, con fácil acceso al centro y agradables espacios para caminar.",
+                alojamiento_body_1: "",
+                alojamiento_body_2: "",
                 gallery_title: "¿Qué más visitar en Ecuador?",
 				gallery_back: "Volver",
                 footer_date: "11 . Julio . 2026",
@@ -194,19 +200,19 @@
                 mins_label: "Minutos"
             },
             en: {
-				pageTitle: "Carolina & Mario's Wedding | Visit Cuenca",
-				introduction_body_1: "Cuenca is one of those cities that makes you want to stay a little longer. Calm, elegant, and full of charm, it sits in southern Ecuador, surrounded by mountains and crossed by rivers that are part of its identity. Its Historic Center, a UNESCO World Heritage Site, stands out for its well-preserved architecture, cobblestone streets, and an atmosphere that effortlessly blends tradition with everyday life.",
-				introduction_body_2: "Walking through Cuenca means enjoying its plazas, churches, and flower-filled balconies, while also soaking in its relaxed pace and vibrant cultural spirit. The city is deeply connected to art, music, and craftsmanship, something you can feel in every corner and in the warmth of its people.",
-				introduction_body_3: "Local cuisine, cozy cafés, and the hospitality of the residents make the experience even more special. And if you love nature, the Cajas National Park is not to be missed. With its lakes, páramo landscapes, and mountain trails, it’s perfect for anyone seeking tranquility and breathtaking scenery.",
-				como_llegar_title: "Getting Around Cuenca",
-				como_llegar_body_1: "Cuenca is easy to explore. Its size allows you to walk through much of the Historic Center, and the tram system conveniently connects key areas of the city.",
-				como_llegar_body_2: "Taxis are also widely available, and ride-sharing apps work safely and reliably. For short trips, taxis are practical and affordable—but, as in Quito, it’s always best to have cash on hand to pay the fare.",
+				pageTitle: "Carolina & Mario's Wedding | Visit La Casa del Suizo",
+				introduction_body_1: "",
+				introduction_body_2: "",
+				introduction_body_3: "",
+				como_llegar_title: "Getting Around La Casa del Suizo",
+				como_llegar_body_1: "",
+				como_llegar_body_2: "",
 				visitar_title: "What Not to Miss",
-				visitar_body_1: "A visit to the Cathedral of the Immaculate Conception, also known as the New Cathedral, is a must. Its blue domes are one of the city’s most iconic symbols and offer an incredible view from above. A stroll along the Tomebamba River ravine provides a different perspective of the city, with charming views and traditional houses.",
-				visitar_body_2: "One special recommendation is a trip to Cajas National Park. Its lakes, trails, and highland landscapes offer a direct connection with nature and views that look straight out of a postcard. You also shouldn’t miss a visit to a traditional toquilla straw hat workshop, where you can see how one of Ecuador’s most iconic crafts is made.",
+				visitar_body_1: "",
+				visitar_body_2: "",
 				alojamiento_title: "Where to Stay",
-                alojamiento_body_1: "The Historic Center is the top choice for those who want to be close to Cuenca’s main cultural attractions and soak in the city’s colonial charm. Boutique hotels and restored historic homes offer a warm, elegant atmosphere. Don’t forget to make a reservation at Tiesto’s Restaurant for an unforgettable meal.",
-                alojamiento_body_2: "If you prefer a quieter, more residential feel, the areas along the Tomebamba River are ideal. They provide easy access to the center and pleasant spaces for walking and relaxing.",
+                alojamiento_body_1: "",
+                alojamiento_body_2: "",
                 gallery_title: "What else to visit in Ecuador?",
 				gallery_back: "Back",
                 footer_date: "11 . July . 2026",
