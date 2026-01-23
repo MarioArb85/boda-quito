@@ -81,13 +81,13 @@
         
         <div class="tabs-container">
             <div class="tabs-menu">
-                <button class="tab-btn active" onclick="openTab(event, 'sierra')">Sierra</button>
-                <button class="tab-btn" onclick="openTab(event, 'amazonia')">Amazonía</button>
+                <button class="tab-btn" onclick="openTab(event, 'sierra')">Sierra</button>
+                <button class="tab-btn active" onclick="openTab(event, 'amazonia')">Amazonía</button>
                 <button class="tab-btn" onclick="openTab(event, 'costa')">Costa</button>
                 <button class="tab-btn" onclick="openTab(event, 'galapagos')">Islas Galápagos</button>
             </div>
 
-            <div id="sierra" class="tab-content active">
+            <div id="sierra" class="tab-content">
 				<a href="../quito/index.html" class="mosaik-card">
                     <img src="../../img/quito_tab.jpg" alt="Quito">
                     <div class="card-overlay"><h4>Quito</h4></div>
@@ -106,7 +106,7 @@
                 </a>
             </div>
 
-            <div id="amazonia" class="tab-content">
+            <div id="amazonia" class="tab-content active">
                 <a href="../la_casa_del_suizo/index.html" class="mosaik-card">
                     <img src="../../img/la_casa_del_suizo_tab.jpg" alt="La Casa del Suizo">
                     <div class="card-overlay"><h4>La Casa del Suizo</h4></div>
@@ -177,18 +177,18 @@
         const translations = {
             es: {
 				pageTitle: "Boda Carolina & Mario | Visitar Tena",
-				introduction_body_1: "",
-				introduction_body_2: "",
-				introduction_body_3: "",
-				como_llegar_title: "¿Cómo moverse en Tena?",
-				como_llegar_body_1: "",
-				como_llegar_body_2: "",
+				introduction_body_1: "Si después de la boda te apetece una aventura de verdad, tienes que bajar al Tena. Es la puerta de entrada a la Amazonía ecuatoriana y el lugar donde la selva empieza a ponerse seria. Aquí el calorcito húmedo y el sonido de los ríos te cambian el chip de inmediato.",
+				introduction_body_2: "Tena es famosa por ser la capital del kayak y el rafting en Ecuador. No importa si eres un experto o si es tu primera vez en el agua, la energía de sus ríos es algo que tienes que sentir. Además, el ambiente en el pueblo es súper relajado y auténtico, perfecto para disfrutar de una cerveza helada.",
+				introduction_body_3: "Lo mejor es que estás a un paso de comunidades indígenas donde puedes aprender sobre su cultura, probar comida exótica (¿te atreves con un chontacuro?) y alucinar con la biodiversidad. Es el destino ideal para los que quieren tachar la selva amazónica de su lista de deseos.",
+				como_llegar_title: "¿Cómo llegar desde Quito?",
+				como_llegar_body_1: "Llegar desde Quito es una ruta preciosa de unas 3.5 a 4 horas. Si vas en auto, toma la vía a Papallacta; pasarás de los páramos fríos de los Andes al calor de la selva en un descenso increíble. Las vistas de las montañas perdiéndose en la vegetación son de otro planeta.",
+				como_llegar_body_2: "Si prefieres el bus, sal desde la terminal terrestre de Quitumbe. Hay varias cooperativas como 'Amazonas' o 'Baños' que te llevan directo. Es un viaje cómodo, barato y te permite ir pegado a la ventana viendo cómo el paisaje se vuelve cada vez más verde y salvaje.",
 				visitar_title: "¿Qué visitar?",
-				visitar_body_1: "",
-				visitar_body_2: "",
+				visitar_body_1: "Lo obligatorio aquí es el rafting en el río Jatunyacu; es pura adrenalina y diversión garantizada. Si prefieres algo más tranquilo, visita las Cavernas de Jumandy para explorar cuevas con estalactitas y una piscina natural de agua cristalina que te dejará como nuevo.",
+				visitar_body_2: "También tienes que ir a Misahuallí, un pueblito cercano donde los monos capuchinos andan libres por la plaza y la playa del río. Desde ahí puedes tomar una canoa para visitar comunidades locales o simplemente caminar por senderos llenos de árboles gigantes y mariposas.",
 				alojamiento_title: "¿Dónde alojarse?",
-                alojamiento_body_1: "",
-                alojamiento_body_2: "",
+                alojamiento_body_1: "Si quieres la experiencia completa, quédate en un 'lodge' de selva. Están a las afueras y te permiten dormir con el sonido de la naturaleza de fondo. Muchos ofrecen paquetes que incluyen todas las comidas y excursiones guiadas, así que no tienes que preocuparte de nada.",
+				alojamiento_body_2: "Para algo más práctico, el centro del Tena tiene hoteles muy cómodos y hostales con buena vibra cerca del malecón. Es la mejor opción si quieres estar a mano de los restaurantes y bares para salir a cenar y conocer a otros viajeros después de tus aventuras del día.",
                 gallery_title: "¿Qué más visitar en Ecuador?",
 				gallery_back: "Volver",
                 footer_date: "11 . Julio . 2026",
@@ -201,18 +201,18 @@
             },
             en: {
 				pageTitle: "Carolina & Mario's Wedding | Visit Tena",
-				introduction_body_1: "",
-				introduction_body_2: "",
-				introduction_body_3: "",
-				como_llegar_title: "Getting Around Tena",
-				como_llegar_body_1: "",
-				como_llegar_body_2: "",
+				introduction_body_1: "If you’re craving a real adventure after the wedding, you’ve got to head down to Tena. It’s the gateway to the Ecuadorian Amazon and the place where the jungle starts getting serious. Here, the humid warmth and the sound of the rivers will flip your internal switch instantly.",
+				introduction_body_2: "Tena is famous for being the kayak and rafting capital of Ecuador. It doesn’t matter if you’re a pro or a first-timer on the water; the energy of these rivers is something you just have to feel. Plus, the town’s vibe is super laid-back and authentic, perfect for enjoying an ice-cold beer.",
+				introduction_body_3: "The best part is that you’re just a step away from indigenous communities where you can learn about their culture, try exotic food (dare to try a chontacuro worm?), and marvel at the biodiversity. It’s the ultimate destination for those wanting to cross the Amazon off their bucket list.",
+				como_llegar_title: "How to get there from Quito",
+				como_llegar_body_1: "Getting there from Quito is a beautiful 3.5 to 4-hour trip. If you’re driving, take the road through Papallacta; you’ll go from the chilly Andean highlands to the jungle heat in an incredible descent. The views of the mountains disappearing into the greenery are out of this world.",
+				como_llegar_body_2: "If you prefer the bus, leave from the Quitumbe terminal. Several lines like 'Amazonas' or 'Baños' will take you straight there. It’s a comfy, cheap trip that lets you stay glued to the window watching the landscape become increasingly green and wild.",
 				visitar_title: "What Not to Miss",
-				visitar_body_1: "",
-				visitar_body_2: "",
+				visitar_body_1: "The absolute must-do here is rafting on the Jatunyacu River; it’s pure adrenaline and guaranteed fun. If you want something chiller, visit the Jumandy Caves to explore caverns with stalactites and a crystal-clear natural pool that will make you feel brand new.",
+				visitar_body_2: "You also have to check out Misahuallí, a nearby village where capuchin monkeys roam free in the plaza and on the river beach. From there, you can hop on a canoe to visit local communities or just hike trails filled with giant trees and butterflies.",
 				alojamiento_title: "Where to Stay",
-                alojamiento_body_1: "",
-                alojamiento_body_2: "",
+                alojamiento_body_1: "For the full experience, stay at a jungle 'lodge'. These are located on the outskirts and let you sleep to the soundtrack of nature. Many offer packages that include all meals and guided tours, so you don’t have to worry about a thing.",
+				alojamiento_body_2: "For something more practical, downtown Tena has very comfy hotels and hostels with great vibes near the boardwalk. It’s the best option if you want to be close to restaurants and bars to grab dinner and meet other travelers after your day’s adventures.",
                 gallery_title: "What else to visit in Ecuador?",
 				gallery_back: "Back",
                 footer_date: "11 . July . 2026",

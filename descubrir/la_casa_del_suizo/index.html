@@ -81,13 +81,13 @@
         
         <div class="tabs-container">
             <div class="tabs-menu">
-                <button class="tab-btn active" onclick="openTab(event, 'sierra')">Sierra</button>
-                <button class="tab-btn" onclick="openTab(event, 'amazonia')">Amazonía</button>
+                <button class="tab-btn" onclick="openTab(event, 'sierra')">Sierra</button>
+                <button class="tab-btn active" onclick="openTab(event, 'amazonia')">Amazonía</button>
                 <button class="tab-btn" onclick="openTab(event, 'costa')">Costa</button>
                 <button class="tab-btn" onclick="openTab(event, 'galapagos')">Islas Galápagos</button>
             </div>
 
-            <div id="sierra" class="tab-content active">
+            <div id="sierra" class="tab-content">
 				<a href="../quito/index.html" class="mosaik-card">
                     <img src="../../img/quito_tab.jpg" alt="Quito">
                     <div class="card-overlay"><h4>Quito</h4></div>
@@ -106,7 +106,7 @@
                 </a>
             </div>
 
-            <div id="amazonia" class="tab-content">
+            <div id="amazonia" class="tab-content active">
                 <a href="../tena/index.html" class="mosaik-card">
                     <img src="../../img/tena_tab.jpg" alt="Tena">
                     <div class="card-overlay"><h4>Tena</h4></div>
@@ -177,18 +177,18 @@
         const translations = {
             es: {
 				pageTitle: "Boda Carolina & Mario | Visitar La Casa del Suizo",
-				introduction_body_1: "",
-				introduction_body_2: "",
-				introduction_body_3: "",
-				como_llegar_title: "¿Cómo moverse en La Casa del Suizo?",
-				como_llegar_body_1: "",
-				como_llegar_body_2: "",
+				introduction_body_1: "Si después de la boda buscas un cambio total de chip, La Casa del Suizo es tu sitio. Está ubicada a orillas del majestuoso río Napo y es uno de los hoteles más icónicos de la selva. Aquí dejas atrás el frío de los Andes para despertar con el sonido de las aves tropicales y el vapor de la Amazonía.",
+				introduction_body_2: "Lo genial de este lugar es que combina la aventura con la comodidad. No vas a estar en una carpa en medio de la nada; vas a estar en una habitación súper cómoda con vistas increíbles al río. La vibra es muy relajada y familiar, perfecta para ir con tu grupo de amigos de la boda o en plan romántico.",
+				introduction_body_3: "Es el balance ideal: tienes piscina para refrescarte del calor húmedo y, a la vez, toda la naturaleza salvaje justo al lado. Prepárate para desconectarte del celular y conectarte con una de las regiones más biodiversas del planeta. ¡Es una experiencia que te cambia la perspectiva!",
+				como_llegar_title: "¿Cómo llegar desde Quito?",
+				como_llegar_body_1: "Para llegar desde Quito, te espera un viaje por tierra de unas 3.5 a 4 horas hasta el sector de Punta Ahuano. La ruta cruza la cordillera oriental y es un espectáculo ver cómo el paisaje se transforma de montañas áridas a una selva espesa y verde. ¡Ten la cámara lista!",
+				como_llegar_body_2: "Una vez en Punta Ahuano, dejas el auto o el bus y te subes a una canoa motorizada. Es un trayecto corto de unos 15 a 20 minutos por el río Napo hasta llegar directamente al hotel. Ese primer viaje en bote es el momento exacto donde sientes que la verdadera aventura amazónica comienza.",
 				visitar_title: "¿Qué visitar?",
-				visitar_body_1: "",
-				visitar_body_2: "",
+				visitar_body_1: "Hay mil cosas por hacer. Puedes visitar 'Amazoonico', un centro de rescate de animales donde verás monos y tucanes de cerca. También es imperdible caminar por la selva primaria con guías locales que te enseñan para qué sirve cada planta; vas a aprender más que en un libro de biología.",
+				visitar_body_2: "Si te gusta el agua, puedes construir tu propia balsa de balsa y navegar río abajo, ¡es divertidísimo! También puedes visitar una comunidad local para ver cómo hacen sus artesanías y probar la chicha. Y obvio, ver el atardecer desde el río es algo que no te puedes perder por nada del mundo.",
 				alojamiento_title: "¿Dónde alojarse?",
-                alojamiento_body_1: "",
-                alojamiento_body_2: "",
+                alojamiento_body_1: "En La Casa del Suizo el alojamiento ya es parte de la experiencia. Las habitaciones son amplias, tienen ventiladores para el calor y balcones con hamacas que dan al río Napo. Es el lugar perfecto para leer un libro o simplemente quedarte mirando la selva mientras descansas.",
+				alojamiento_body_2: "El hotel tiene todas las de ley: un área de piscina increíble con bar, un restaurante buffet con comida deliciosa (tanto local como internacional) y espacios comunes muy acogedores. Es ideal porque tienes el confort de un hotel de ciudad pero en el corazón de la selva ecuatoriana.",
                 gallery_title: "¿Qué más visitar en Ecuador?",
 				gallery_back: "Volver",
                 footer_date: "11 . Julio . 2026",
@@ -201,18 +201,18 @@
             },
             en: {
 				pageTitle: "Carolina & Mario's Wedding | Visit La Casa del Suizo",
-				introduction_body_1: "",
-				introduction_body_2: "",
-				introduction_body_3: "",
-				como_llegar_title: "Getting Around La Casa del Suizo",
-				como_llegar_body_1: "",
-				como_llegar_body_2: "",
+				introduction_body_1: "If you’re craving a total reset after the wedding in Quito, La Casa del Suizo is the place for you. Perched on the banks of the majestic Napo River, it’s one of the jungle’s most iconic hotels. You’ll swap the Andean chill for tropical birdsong and the warm embrace of the Amazon.",
+				introduction_body_2: "What makes this place great is how it blends adventure with comfort. You won’t be in a tent in the middle of nowhere; you’ll be in a cozy room with incredible river views. The vibe is super laid-back and friendly, perfect for hanging out with your wedding crew or for a romantic escape.",
+				introduction_body_3: "It’s the perfect balance: a pool to cool off from the humid heat and wild nature right at your doorstep. Get ready to put your phone away and connect with one of the most biodiverse regions on Earth. It’s an experience that will definitely change your perspective!",
+				como_llegar_title: "How to get there from Quito",
+				como_llegar_body_1: "To get there from Quito, you’re in for a 3.5 to 4-hour scenic drive to the Punta Ahuano area. The route crosses the eastern mountain range, and watching the landscape transform from dry mountains to thick, lush jungle is a total trip. Keep your camera ready!",
+				como_llegar_body_2: "Once in Punta Ahuano, you’ll leave your car or bus and hop onto a motorized canoe. It’s a short 15 to 20-minute ride down the Napo River straight to the hotel. That first boat ride is the exact moment you’ll feel the true Amazonian adventure beginning.",
 				visitar_title: "What Not to Miss",
-				visitar_body_1: "",
-				visitar_body_2: "",
+				visitar_body_1: "There’s so much to do. You can visit 'Amazoonico', an animal rescue center where you can see monkeys and toucans up close. A hike through the primary forest with local guides is also a must; they’ll show you what every plant is used for—you’ll learn more than in any biology book.",
+				visitar_body_2: "If you’re into water activities, you can build your own balsa wood raft and float downriver—it’s a blast! You can also visit a local community to see how they make crafts and try 'chicha'. And of course, catching the sunset from the river is something you absolutely cannot miss.",
 				alojamiento_title: "Where to Stay",
-                alojamiento_body_1: "",
-                alojamiento_body_2: "",
+				alojamiento_body_1: "At La Casa del Suizo, the stay is part of the adventure. Rooms are spacious, with fans for the heat and balconies featuring hammocks overlooking the Napo River. It’s the perfect spot to read a book or just stare at the jungle while you recharge your batteries.",
+				alojamiento_body_2: "The hotel has it all: an awesome pool area with a bar, a buffet restaurant serving delicious local and international food, and cozy common areas. It’s ideal because you get city-hotel comfort right in the heart of the Ecuadorian rainforest.",
                 gallery_title: "What else to visit in Ecuador?",
 				gallery_back: "Back",
                 footer_date: "11 . July . 2026",

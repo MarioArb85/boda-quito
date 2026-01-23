@@ -79,13 +79,13 @@
         
         <div class="tabs-container">
             <div class="tabs-menu">
-                <button class="tab-btn active" onclick="openTab(event, 'sierra')">Sierra</button>
-                <button class="tab-btn" onclick="openTab(event, 'amazonia')">Amazonía</button>
+                <button class="tab-btn" onclick="openTab(event, 'sierra')">Sierra</button>
+                <button class="tab-btn active" onclick="openTab(event, 'amazonia')">Amazonía</button>
                 <button class="tab-btn" onclick="openTab(event, 'costa')">Costa</button>
                 <button class="tab-btn" onclick="openTab(event, 'galapagos')">Islas Galápagos</button>
             </div>
 
-            <div id="sierra" class="tab-content active">
+            <div id="sierra" class="tab-content">
 				<a href="../quito/index.html" class="mosaik-card">
                     <img src="../../img/quito_tab.jpg" alt="Quito">
                     <div class="card-overlay"><h4>Quito</h4></div>
@@ -104,7 +104,7 @@
                 </a>
             </div>
 
-            <div id="amazonia" class="tab-content">
+            <div id="amazonia" class="tab-content active">
                 <a href="../tena/index.html" class="mosaik-card">
                     <img src="../../img/tena_tab.jpg" alt="Tena">
                     <div class="card-overlay"><h4>Tena</h4></div>
@@ -175,18 +175,18 @@
         const translations = {
             es: {
 				pageTitle: "Boda Carolina & Mario | Visitar Cuyabeno",
-				introduction_body_1: "",
-				introduction_body_2: "",
-				introduction_body_3: "",
-				como_llegar_title: "¿Cómo moverse en Cuyabeno?",
-				como_llegar_body_1: "",
-				como_llegar_body_2: "",
+				introduction_body_1: "Si después de la fiesta en Quito buscas algo que te vuele la cabeza, el Cuyabeno es tu destino. Es una de las zonas con mayor biodiversidad del mundo y el corazón de la selva profunda. Prepárate para cambiar el ruido del tráfico por el de guacamayos, monos y el río fluyendo.",
+				introduction_body_2: "Lo que hace especial a esta reserva es su sistema de lagunas inundadas. Navegar en canoa por estos espejos de agua mientras el sol se pone es una de esas experiencias que se te quedan grabadas para siempre. Es el lugar perfecto para desconectarte del mundo y sentirte un explorador de verdad.",
+				introduction_body_3: "Aquí la naturaleza manda y tú eres solo un invitado. El ambiente es relajado pero aventurero, ideal si quieres vivir la Amazonía de forma auténtica. Es un viaje que requiere un poco más de tiempo, pero te aseguro que cada segundo vale la pena. ¡Vas a flipar con lo que verás!",
+				como_llegar_title: "¿Cómo llegar desde Quito?",
+				como_llegar_body_1: "Para llegar, primero debes viajar de Quito a Lago Agrio. Puedes tomar un vuelo cortito de 45 minutos o un bus nocturno de unas 7 horas. Una vez allí, el personal de tu lodge te recogerá para llevarte en camioneta hasta la entrada de la reserva en el 'Puente del Cuyabeno'.",
+				como_llegar_body_2: "Desde el puente, la aventura empieza en serio con un viaje en canoa motorizada de dos horas por el río hasta tu lodge. Es el momento perfecto para empezar a avistar animales y dejarte atrapar por la selva. No hay otra forma de entrar, ¡así que disfruta el paseo por el agua!",
 				visitar_title: "¿Qué visitar?",
-				visitar_body_1: "",
-				visitar_body_2: "",
+				visitar_body_1: "La Laguna Grande es la estrella del viaje; bañarse ahí al atardecer mientras buscas delfines rosados es mágico. También tienes que hacer las caminatas nocturnas para ver insectos y ranas que parecen de otro planeta, y por supuesto, visitar a una comunidad Siona para conocer su cultura.",
+				visitar_body_2: "No te pierdas el avistamiento de caimanes por la noche. Salir en canoa con linternas y ver esos ojos brillando en el agua te da un subidón de adrenalina único. Además, simplemente sentarte a observar el bosque inundado o 'igapó' te hará sentir en una película de National Geographic.",
 				alojamiento_title: "¿Dónde alojarse?",
-                alojamiento_body_1: "",
-                alojamiento_body_2: "",
+				alojamiento_body_1: "En Cuyabeno te alojas en 'Eco-lodges' diseñados para ser amigables con el entorno. La mayoría usa paneles solares y sistemas de agua ecológicos. Son rústicos pero súper cómodos, con mosquiteros y balcones geniales para ver la selva. Es la definición de lujo natural sin pretensiones.",
+				alojamiento_body_2: "Casi todos los lodges ofrecen paquetes 'all-inclusive' que cubren comida, guías y transporte desde Lago Agrio. Hay opciones para todos: desde sitios muy básicos para mochileros hasta cabañas más privadas con baños increíbles y vistas directas a la laguna. ¡Tú eliges tu nivel de aventura!",
                 gallery_title: "¿Qué más visitar en Ecuador?",
 				gallery_back: "Volver",
                 footer_date: "11 . Julio . 2026",
@@ -199,18 +199,18 @@
             },
             en: {
 				pageTitle: "Carolina & Mario's Wedding | Visit Cuyabeno",
-				introduction_body_1: "",
-				introduction_body_2: "",
-				introduction_body_3: "",
-				como_llegar_title: "Getting Around Cuyabeno",
-				como_llegar_body_1: "",
-				como_llegar_body_2: "",
+				introduction_body_1: "If you’re looking for a mind-blowing experience after the wedding in Quito, Cuyabeno is the way to go. It’s one of the most biodiverse spots on the planet and the heart of the deep jungle. Get ready to swap traffic noise for macaws, monkeys, and the sound of the flowing river.",
+				introduction_body_2: "What makes this reserve special is its flooded lagoon system. Paddling through these water mirrors while the sun sets is one of those experiences that stays with you forever. It’s the perfect place to disconnect from the world and feel like a true explorer.",
+				introduction_body_3: "Nature is in charge here, and you’re just a guest. The vibe is laid-back yet adventurous, ideal if you want to experience the Amazon authentically. It takes a bit more time to get here, but I promise every second is worth it. You’re going to be amazed by what you see!",
+				como_llegar_title: "How to get there from Quito?",
+				como_llegar_body_1: "To get there, you first need to travel from Quito to Lago Agrio. You can take a quick 45-minute flight or a 7-hour overnight bus. Once there, your lodge staff will pick you up and drive you to the reserve entrance at the 'Cuyabeno Bridge'.",
+				como_llegar_body_2: "From the bridge, the adventure truly begins with a two-hour motorized canoe trip down the river to your lodge. It’s the perfect time to start spotting wildlife and let the jungle take over. There’s no other way in, so just sit back and enjoy the ride on the water!",
 				visitar_title: "What Not to Miss",
-				visitar_body_1: "",
-				visitar_body_2: "",
+				visitar_body_1: "Laguna Grande is the star of the show; swimming there at sunset while looking for pink river dolphins is pure magic. You also have to go on a night hike to see alien-looking insects and frogs, and of course, visit a Siona community to learn about their amazing culture.",
+				visitar_body_2: "Don’t miss out on caiman spotting at night. Going out in a canoe with flashlights and seeing those glowing eyes in the water gives you a unique adrenaline rush. Plus, just sitting and observing the flooded forest or 'igapó' will make you feel like you’re in a National Geographic film.",
 				alojamiento_title: "Where to Stay",
-                alojamiento_body_1: "",
-                alojamiento_body_2: "",
+				alojamiento_body_1: "In Cuyabeno, you’ll stay in eco-lodges designed to be environmentally friendly. Most use solar panels and eco-friendly water systems. They are rustic but super comfy, with mosquito nets and cool balconies for jungle viewing. It’s the definition of unpretentious natural luxury.",
+				alojamiento_body_2: "Most lodges offer all-inclusive packages that cover meals, guides, and transport from Lago Agrio. There are options for everyone: from very basic backpacker spots to more private cabins with incredible bathrooms and direct lagoon views. You choose your adventure level!",
                 gallery_title: "What else to visit in Ecuador?",
 				gallery_back: "Back",
                 footer_date: "11 . July . 2026",
